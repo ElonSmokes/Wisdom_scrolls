@@ -1,5 +1,7 @@
 # AI Engineer Apprenticeship
 
+> **Текущий маршрут (с 23.09.2026):** [рабочий roadmap с CUDA и Git в начале](WORK_INTEGRATED_ROADMAP.md). Он даёт точные ссылки, порядок чтения, практику на H200/GitLab и результаты по каждому направлению. 32-недельный план ниже сохраняется как углублённый самостоятельный трек; он больше не задаёт обязательный порядок для рабочих задач.
+
 A practical 32-week path from Windows/system-administration experience and rusty Python basics to independently building, testing, containerizing, deploying, and evaluating local-AI systems.
 
 ## Target capability
@@ -46,7 +48,8 @@ By the end, you should be able to:
 
 ## Repository map
 
-- [`SYLLABUS.md`](SYLLABUS.md) — exact weekly path and resources
+- [`WORK_INTEGRATED_ROADMAP.md`](WORK_INTEGRATED_ROADMAP.md) — актуальный порядок, ресурсы и рабочие milestones
+- [`SYLLABUS.md`](SYLLABUS.md) — прежний 32-недельный самостоятельный трек
 - [`PROGRESS.md`](PROGRESS.md) — current status and evidence log
 - [`modules/`](modules/) — assignments and exit criteria for each phase
 - [`templates/weekly-review.md`](templates/weekly-review.md) — weekly reflection
@@ -55,7 +58,7 @@ By the end, you should be able to:
 
 ## Begin
 
-1. Read [`AI_USAGE_RULES.md`](AI_USAGE_RULES.md).
-2. Complete [`modules/00-setup-and-baseline.md`](modules/00-setup-and-baseline.md).
-3. Update [`PROGRESS.md`](PROGRESS.md) each Friday.
-4. Do not start Phase 1 until the baseline deliverable is committed.
+1. Read [`WORK_INTEGRATED_ROADMAP.md`](WORK_INTEGRATED_ROADMAP.md) and choose the CUDA/GPU inference milestone.
+2. Study Git/GitLab in parallel on a training branch and one real pipeline.
+3. Record evidence and the next blind spot in [`PROGRESS.md`](PROGRESS.md).
+4. Use [`modules/00-setup-and-baseline.md`](modules/00-setup-and-baseline.md) when you want an independent coding baseline; it is no longer a prerequisite for working milestones.
