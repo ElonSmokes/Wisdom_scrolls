@@ -1,5 +1,7 @@
 # 32-Week Syllabus
 
+> **Статус:** самостоятельный 32-недельный трек. Актуальный рабочий порядок и конкретные ссылки по CUDA, Git/GitLab и остальным дисциплинам — [WORK_INTEGRATED_ROADMAP.md](WORK_INTEGRATED_ROADMAP.md). Недельные сроки ниже не обязательны при текущих производственных дедлайнах.
+
 This curriculum is designed for 8–10 focused hours per week. Extend the schedule rather than skipping exercises.
 
 ## Phase 0 — Setup and baseline
