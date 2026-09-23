@@ -1,5 +1,7 @@
 # AI Usage Rules
 
+> **Область применения:** запреты на AI-implementation, закрытые экзамены и правило 30 минут относятся к самостоятельным учебным упражнениям 32-недельного syllabus. В рабочих проектах агент может писать код и выполнять команды. Перед принятием значимого изменения человек проверяет постановку задачи, diff, тест или измерение результата, затронутые границы доступа, отказной сценарий и откат. При срочном инциденте сначала восстанавливаем сервис; учебный разбор делаем после. См. [WORK_INTEGRATED_ROADMAP.md](WORK_INTEGRATED_ROADMAP.md).
+
 The purpose of these rules is not purity. It is to prevent speed from silently replacing competence.
 
 ## The traffic-light system
