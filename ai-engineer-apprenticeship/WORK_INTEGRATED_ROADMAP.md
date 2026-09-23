@@ -12,6 +12,18 @@
 
 ## 1. CUDA, устройство GPU и LLM inference — начать сейчас (4–6 недель)
 
+### Курсы NVIDIA DLI: конкретный порядок
+
+Каталог NVIDIA за май 2026 перечисляет много независимых направлений. Для текущей работы с H200 и vLLM/SGLang пройти этот короткий маршрут; документация ниже нужна рядом с курсами, когда разбираешь измерения. Ссылки ведут на карточки NVIDIA; запись может потребовать входа, а цена и доступность меняются.
+
+1. [An Even Easier Introduction to CUDA](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+T-AC-01+V1) — вводный практикум (в каталоге 1 час). После него своими словами объяснить grid/block/thread, запуск kernel и обмен с памятью.
+2. [Fundamentals of Accelerated Computing With CUDA Python](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-10+V1) — основной практикум (в каталоге 8 часов). Сделать маленький эксперимент с kernel и замером. Курс использует Numba: он помогает понять CUDA, но не заменяет изучение внутренностей vLLM.
+3. [Sizing LLM Inference Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-18+V1) — после знакомства с prefill/decode (в каталоге 3 часа). Проверить на H200 расчёты VRAM, KV cache, throughput/latency и concurrency для одного фиксированного workload.
+4. [Optimizing CUDA Machine Learning Codes With NVIDIA Nsight Profiling Tools](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-03+V2) — после первого benchmark. Записать одну гипотезу о bottleneck, снять timeline/профиль и сравнить с исходными измерениями.
+5. [Find the Bottleneck: Optimize AI Pipelines With Nsight Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-14+V1) — дополнительно, если проблема находится на стыке CPU/GPU/передачи данных. Учебный пример там про видео; применять метод profiling к своему inference pipeline.
+
+Первый минимальный финиш — пункты 1–4 и объяснённый H200 benchmark; пятый брать по измеренному узкому месту. [Официальный каталог NVIDIA Learning Paths](https://www.nvidia.com/en-us/learn/learning-paths/) — для поиска актуальной карточки, если прямой URL переедет.
+
 **Порядок изучения:**
 
 1. **Карта вычислений.** [NVIDIA GPU Performance Background](https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html) → [CUDA Programming Guide: Introduction / Programming Model](https://docs.nvidia.com/cuda/cuda-programming-guide/). Разобрать SM, warps, blocks, память HBM/L2/shared/registers, kernel launch, PCIe/NVLink, latency versus bandwidth. Читать выбранные разделы, не весь справочник.
@@ -66,6 +78,12 @@
 ## 10. ML engineering, RAG и модели (4–8 недель после измерений)
 
 [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course) → [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/) → [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) → [Hugging Face PEFT](https://huggingface.co/docs/peft/index) → [Hugging Face TRL](https://huggingface.co/docs/trl/index). Для RAG — [Stanford IR book](https://nlp.stanford.edu/IR-book/) (evaluation/retrieval) и [Qdrant docs](https://qdrant.tech/documentation/) для ACL-aware retrieval и фильтров. Сначала baseline на ClearGate/документном поиске, затем размеченные данные, train/dev/held-out split, fine-tune только при доказанной потребности, абляция и мониторинг дрейфа. **Книга:** [Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch), избранные главы об attention/training; глубокое чтение после рабочего baseline. **Выход:** решение о модели с воспроизводимым quality/latency/cost сравнением. **Не верю:** «fine-tune исправит отсутствие eval dataset».
+
+### Курсы NVIDIA DLI для следующего рабочего этапа
+
+Когда появится реальная задача по внутреннему поиску или RAG, пройти в порядке: [Building RAG Agents With LLMs](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-15+V1) → [Evaluating RAG and Semantic Search Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-32+V1) → [Introduction to Deploying RAG Pipelines for Production at Scale](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-19+V1). После первого курса построить небольшой retrieval baseline на разрешённом рабочем наборе; после второго — recall@k, качество ответов и проверку ACL; после третьего — нагрузочный и отказной сценарии на staging. [Adding New Knowledge to LLMs](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+C-FX-26+V1) — позже, когда сравнение RAG и fine-tuning станет практическим вопросом. Формат instructor-led может ограничивать доступность.
+
+[Сертификация NCA-GENL](https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/) — возможная проверка основ после рабочих результатов; [NCP-GENL](https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-professional/) — когда закроешь также distributed parallelism, PEFT, мониторинг и профилирование. Экзамены не являются обязательным шагом между рабочими milestones.
 
 ## 11. Applied AI, продукт и лидерство — постоянно
 
