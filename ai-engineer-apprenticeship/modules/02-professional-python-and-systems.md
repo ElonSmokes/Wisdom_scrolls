@@ -1,83 +1,33 @@
-# Phase 2–4 — Professional Python, Linux, Git and Docker
+# Python runtime, Linux и containers
 
-## Mission
+[Карта модулей](README.md) · [Справочник и LFS162](../WORK_INTEGRATED_ROADMAP.md)
 
-Turn working scripts into maintainable software and understand the operating environment beneath them.
+Открывать, когда неясно, как код становится работающим процессом. Результат — объяснённый запуск одной небольшой системы.
 
-## Professional Python deliverable
+## Порядок чтения
 
-Refactor the document inspection CLI into a package with:
+1. [Python tutorial](https://docs.python.org/3/tutorial/): modules/virtual environments; [typing](https://docs.python.org/3/library/typing.html) и [asyncio](https://docs.python.org/3/library/asyncio.html) под конкретный код.
+2. [The Linux Command Line](https://linuxcommand.org/tlcl.php): permissions, processes, I/O; [systemd](https://systemd.io/) для сервисов.
+3. [Docker overview](https://docs.docker.com/get-started/docker-overview/) → [Compose](https://docs.docker.com/compose/).
+4. [Podman](https://docs.podman.io/en/latest/) — если он используется в твоём окружении; [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/) — для GPU-контейнеров.
 
-- `src/` and `tests/` layout;
-- `pyproject.toml`;
-- typed public functions;
-- dataclasses or Pydantic models where useful;
-- environment-based configuration;
-- structured logging;
-- pytest, Ruff and mypy checks;
-- a console entry point.
+Установка всех инструментов сразу не нужна. Версии фиксировать по фактическому dev-окружению.
 
-Write one ADR explaining a real design choice, such as regex registry design or error-handling policy.
+## Практика
 
-## Linux lab
+Выбрать один сервис, предпочтительно учебный Python API.
 
-Create a disposable Linux VM or container and demonstrate:
+- Проследить interpreter → imports/config → process → port → response. Отличить CPU-bound работу от ожидания I/O.
+- Собрать image и объяснить build context, слои, runtime user и запуск.
+- Нарисовать путь container → network → volume → dependency; при GPU-сервисе добавить GPU device.
+- Сохранить учебную запись в volume, перезапустить контейнер и проверить данные.
+- По одному воспроизвести неверный адрес зависимости и отказ доступа к тестовому файлу. Для каждого записать симптом, наблюдение и минимальное исправление.
+- Проверить завершение процесса и повторный запуск. Для stateful-компонента отдельно проверить restore в пустое учебное окружение.
 
-- users, groups and permissions;
-- process inspection and signals;
-- environment variables;
-- stdout/stderr and pipes;
-- filesystem and disk inspection;
-- listening ports and active connections;
-- DNS lookup and route inspection;
-- logs for a failed service;
-- SSH keys and host verification.
+Агент может собирать конфигурацию; человек проверяет права, пути, зависимости и наблюдаемый результат. Удалять volumes или менять права на production ради упражнения не требуется.
 
-For each command, write what evidence it provides. Do not maintain a magic-command list.
+## Выход
 
-## Git lab
+Есть команда запуска, версии, схема runtime и одно подтверждённое исправление. [Docker Exam](../exams/MASTER_EXAMS.md#docker-exam).
 
-Use a training repository to perform:
-
-- feature branches and pull requests;
-- merge conflict resolution;
-- interactive rebase;
-- revert of a bad commit;
-- `git bisect` to locate an introduced defect;
-- recovery of a lost commit through reflog.
-
-## Docker project
-
-Containerize the packaged application.
-
-Required:
-
-- small, reproducible Dockerfile;
-- non-root runtime user;
-- `.dockerignore`;
-- explicit dependency installation;
-- graceful signal handling;
-- persistent input/output mount;
-- health check when an HTTP service is introduced;
-- Compose file with at least two services;
-- written explanation of layers, build cache, CMD, ENTRYPOINT and networking.
-
-## Boss fight
-
-You receive a Compose stack where:
-
-- the API cannot resolve the database;
-- the volume is owned by the wrong UID;
-- the container exits on SIGTERM incorrectly;
-- a dependency is missing from the final image;
-- the health check targets the wrong interface.
-
-Diagnose each fault from evidence and write a short incident report.
-
-## Exit criteria
-
-- can create a package without a template generator;
-- can explain a traceback and use a debugger;
-- can diagnose a service using processes, ports, DNS and logs;
-- can write a Dockerfile and Compose file without agent generation;
-- passes the Docker exam.
+LFS162 даёт вводную основу и собственный badge по условиям roadmap; этот модуль углубляет практику Linux/containers. За восстановление сервиса — личная ачивка. Далее [SRE](observability-and-sre.md) или возврат к текущей задаче.

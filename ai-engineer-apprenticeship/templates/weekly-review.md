@@ -1,57 +1,29 @@
-# Weekly Engineering Review
+# Недельный обзор
 
-Week:
-Dates:
-Hours planned:
-Hours completed:
+Период:
+Активный курс / раздел:
+Доступное время на следующей неделе:
 
-## What did I build?
+## Что завершено
 
-Link commits, tests, screenshots or benchmark results.
+Один результат:
+Что теперь могу объяснить:
+Доказательство / ID заметки:
+Награда или маленькая победа:
 
-## What do I understand now that I did not understand last week?
+## Что помогло и что мешает
 
-Be concrete. "Docker" is not an answer; "service-name DNS resolution inside a Compose bridge network" is.
+Где помог агент:
+Что проверил я:
+Один оставшийся пробел:
+Нужна ли пауза из-за работы или срока доступа курса:
 
-## What did I use AI for?
+## Следующее занятие
 
-- Green uses:
-- Yellow uses and verification evidence:
-- Red-rule violations, if any:
+Конкретное действие на 45–60 минут:
+Когда вернусь к нему:
+Что будет считаться достаточным результатом:
 
-No punishment. Diagnose the condition that caused the violation.
+Для рабочего проекта отдельно указать ближайший приоритет, если это помогает. Не превращать обзор в обязательный отчёт обо всех задачах.
 
-## Where did time disappear?
-
-Separate:
-
-- necessary difficulty;
-- unclear requirements;
-- agent retry loops;
-- deployment roulette;
-- context switching;
-- avoidable perfectionism.
-
-## What victory happened?
-
-Record at least one completed loop, however small.
-
-## What is still emotionally open?
-
-Name the task or fear your mind keeps rehearsing.
-
-## Next week's single learning objective
-
-One sentence:
-
-> By Friday, I will be able to ___ without AI implementation.
-
-## Next week's single production priority
-
-One product only. Other work goes to the parking lot.
-
-## Recovery boundary
-
-- Work stopping time:
-- Weekend communication rule:
-- Genuine emergency definition:
+[Прогресс](../PROGRESS.md) · [AI-правила](../AI_USAGE_RULES.md)

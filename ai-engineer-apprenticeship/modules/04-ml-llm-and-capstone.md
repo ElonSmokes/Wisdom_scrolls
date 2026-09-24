@@ -1,116 +1,40 @@
-# Phase 6–7 — ML, LLM Inference and Production Capstone
+# ML, RAG и небольшой capstone
 
-## Mission
+Основной этап 4. [NVIDIA RAG и prerequisites](../WORK_INTEGRATED_ROADMAP.md) · [Карта модулей](README.md)
 
-Replace demo-driven judgement with measurable quality, then build a local document-analysis system you can explain and operate.
+Вход: Python/OOP, основы deep learning; для курса рекомендована работа с PyTorch. Начинать с задачи и измеримого baseline.
 
-## ML foundations
+## По порядку
 
-Complete the relevant Google ML Crash Course sections on:
+1. [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course): splits, overfitting, classification/evaluation.
+2. [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/) и [HF LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) — нужные пробелы, не обязательное чтение обоих курсов целиком.
+3. NVIDIA Building RAG Agents из roadmap → assessment.
+4. [Stanford IR](https://nlp.stanford.edu/IR-book/): retrieval/evaluation; [Qdrant docs](https://qdrant.tech/documentation/) — если он выбран для практики.
+5. PEFT/fine-tuning брать после baseline и доказанной потребности; ссылки и книги остаются в roadmap.
 
-- datasets and splits;
-- classification;
-- precision, recall and thresholds;
-- overfitting and generalization;
-- embeddings;
-- fairness and data quality.
+## Практика: маленький поиск по документам
 
-For ClearGate-style work, create a labelled evaluation set with separate development and held-out test portions. Never tune prompts, rules or thresholds on the held-out set.
+Подготовить около 20 синтетических документов и 20 вопросов. Добавить вопросы без ответа и документы разных учебных владельцев. Такой набор проверяет механику, а не доказывает production-качество.
 
-## Retrieval lab
+- Зафиксировать простой baseline, затем embedding retrieval и при необходимости reranking.
+- Для вопросов указать релевантные документы; отделить примеры для настройки от итоговой проверки.
+- Измерять retrieval отдельно от generation: найден ли источник, отвечает ли ответ на вопрос, подтверждён ли он источником, где система должна отказаться.
+- Проверить, что контекст и ответ не раскрывают документы другого владельца. Post-filter после генерации не заменяет контроль доступа.
+- Сравнить один параметр: chunk size, k или reranker. Сохранить конфигурации, сырые результаты и ошибки.
+- LLM-as-judge использовать с проверкой на размеченных примерах; не объявлять его оценку независимой истиной.
 
-Build a small retrieval system without LangChain or an agent framework:
+[QA-модуль](quality-and-evaluation.md) помогает с выборкой и регрессиями. Serving и нагрузку разбирать в [CUDA/inference](cuda-and-inference.md).
 
-1. parse documents;
-2. split them into chunks;
-3. compute embeddings;
-4. store vectors and metadata;
-5. retrieve by similarity;
-6. calculate recall@k on labelled questions;
-7. add reranking and compare results.
+## Capstone — по желанию, один сценарий
 
-Document chunking failures and citation-boundary problems.
+Выбрать **либо** поиск с цитатами, **либо** review PII findings. Не требуется одновременно строить два продукта.
 
-## Transformer and inference study
+Состав: синтетические входы → backend → выбранный pipeline → review/API → экспорт результата. Добавить один quality report, границу доступа, воспроизводимый запуск и сценарий восстановления. Интерфейс может быть минимальным.
 
-You must be able to explain:
+Финиш — другой человек или ты из чистого учебного окружения воспроизводит запуск, проверяет один успешный и один ошибочный сценарий. Реальная эксплуатация требует отдельной приёмки.
 
-- tokenization and vocabulary;
-- embeddings and positional information;
-- self-attention at a conceptual and tensor-shape level;
-- causal masking;
-- transformer blocks;
-- prefill versus decode;
-- KV cache;
-- batching and continuous batching;
-- quantization trade-offs;
-- tensor parallelism;
-- TTFT, inter-token latency and throughput.
+## Выход и награда
 
-## vLLM lab
+Есть baseline, честное сравнение и понятные ограничения. [LLM Systems Exam](../exams/MASTER_EXAMS.md#llm-systems-exam).
 
-Serve a model locally and measure:
-
-- cold and warm model load;
-- TTFT;
-- decode tokens per second;
-- concurrency at 1, 2, 4 and 8 requests;
-- memory use;
-- failures at excessive context length;
-- quality differences across decoding settings.
-
-Do not report one tokens-per-second number without workload definition.
-
-# Capstone: ClearGate Lite
-
-Build a local-first service that accepts text documents and returns reviewable PII findings.
-
-## Required pipeline
-
-1. ingestion and text normalization;
-2. deterministic detectors for structured identifiers;
-3. model-assisted candidate classification or review;
-4. span merge with source offsets preserved;
-5. policy decision: `PROTECTED`, `PUBLIC`, or `REVIEW`;
-6. placeholder rendering;
-7. leakage verification;
-8. audit event generation;
-9. reviewer API;
-10. export of masked text and evaluation report.
-
-## Required quality work
-
-- labelled corpus with documented annotation rules;
-- precision, recall and F1 by label and document type;
-- false-positive and false-negative taxonomy;
-- held-out test set;
-- ablation comparing deterministic-only, model-only and combined systems;
-- latency distribution, not only average;
-- regression suite for every discovered serious failure;
-- explicit known limitations.
-
-## Operational requirements
-
-- Compose-based deployment;
-- non-root containers;
-- no required outbound internet;
-- health and readiness checks;
-- structured logs with correlation IDs;
-- backup and restore instructions;
-- threat model and privacy boundary;
-- reproducible deployment from a clean host;
-- failure-safe behaviour when the model is unavailable.
-
-## Final defence
-
-In a recorded or live 60-minute session:
-
-1. deploy from a clean clone;
-2. process a test document;
-3. trace one finding through the system;
-4. explain one false positive and one false negative;
-5. change a business rule and add its regression test;
-6. diagnose a deliberately broken container;
-7. explain what you would redesign for production scale.
-
-Graduation requires understanding, not perfection.
+Сертификат NVIDIA относится к завершению курса. Собственный retrieval baseline и capstone дают отдельные личные ачивки; замкнутый проект можно отметить до любого следующего курса.

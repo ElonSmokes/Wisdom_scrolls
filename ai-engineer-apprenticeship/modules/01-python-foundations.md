@@ -1,74 +1,27 @@
-# Phase 1 — Python Foundations
+# Python: чтение кода и самостоятельная основа
 
-## Mission
+[Карта модулей](README.md) · [Курсы и награды](../WORK_INTEGRATED_ROADMAP.md)
 
-Move from remembering Python concepts to independently producing small, tested programs from written requirements.
+Открывать перед CUDA, если мешают функции/массивы, либо позже под задачу backend. Нужные темы можно разобрать выборочно. Для сертификата CS50P потребуется полная работа по требованиям курса.
 
-## Primary course
+## Учиться по порядку
 
-Complete Harvard CS50P in order. Do every required problem yourself. Do not binge-watch lectures without completing exercises.
+[CS50P](https://cs50.harvard.edu/python/): Functions/Variables → Conditionals → Loops → Exceptions → Libraries → Unit Tests → File I/O → Regular Expressions → OOP → Et Cetera → final project. [Python tutorial](https://docs.python.org/3/tutorial/) использовать для уточнения конкретного механизма.
 
-## Required projects
+Для CUDA дополнительно разобрать ndarray, shape, dtype и поэлементные операции на NumPy-примерах из материалов выбранного курса. Уверенное чтение простого массива важнее преждевременной сложной архитектуры.
 
-### 1. Log analyst
+## Практика — выбрать один уровень
 
-Read one or more log files and produce counts by severity, source and time range. Add filtering and useful errors.
+**Короткий:** взять небольшую функцию, назвать входы/выходы, предсказать результат на пустом и обычном входе, затем проверить. Изменить одно условие и объяснить последствия.
 
-### 2. Deterministic PII candidate extractor
+**Самостоятельный:** сделать CLI для синтетических текстовых файлов: число слов, ошибки чтения и JSON-результат. Для проверки подготовить пустой файл, обычный текст и отсутствующий путь. Тесты должны доказывать поведение, а не выполнять заданную квоту.
 
-Detect, normalize and report:
+**Углубление:** добавить поиск дубликатов по содержимому, конфигурацию и нормальные сообщения об ошибках. Это учебный инструмент, не обещание точного PII detector.
 
-- email addresses;
-- phone-number candidates;
-- dates;
-- document identifiers;
-- configurable keywords.
+На самостоятельной попытке сначала писать самому; агент может объяснять и разбирать результат. В graded CS50P-заданиях следовать актуальным правилам курса.
 
-This is not an anonymizer. It teaches parsing, data structures, regular expressions and tests.
+## Выход
 
-### 3. Document inspection CLI
+Можно прочитать и изменить небольшую функцию, объяснить исключение и написать проверку граничного случая. [Python Exam](../exams/MASTER_EXAMS.md#python-exam) — внутренняя проверка.
 
-Input: `.txt` files in a directory.
-
-Output:
-
-- document metadata;
-- findings as JSON;
-- summary table;
-- clear exit codes;
-- structured logs.
-
-## Weekly learning loop
-
-1. Watch/read one lesson segment.
-2. Reproduce examples from memory.
-3. Complete the course problem.
-4. Build one small variation relevant to legal documents.
-5. Write what confused you.
-6. Commit evidence.
-
-## Mandatory concepts
-
-- values, variables and expressions;
-- conditionals and loops;
-- functions and scope;
-- lists, tuples, sets and dictionaries;
-- files and encodings;
-- exceptions;
-- imports and modules;
-- regular expressions;
-- classes and composition;
-- tests and fixtures;
-- command-line arguments.
-
-## Boss fight
-
-In 120 minutes, without AI, create a program that reads a directory of text files and writes a JSON report containing per-file word counts, duplicate hashes and email candidates. Include tests for empty input, malformed UTF-8 and duplicate files.
-
-## Exit criteria
-
-- CS50P exercises and final project completed;
-- Python exam score at least 80%;
-- can start from a blank file rather than modifying generated code;
-- can explain data flow, error handling and test strategy;
-- can use documentation without copying unknown code.
+[Бесплатный CS50 Certificate](https://cs50.harvard.edu/python/certificate/) выдаётся только за выполнение требований CS50P. Наш CLI может стать идеей проекта, но не объявляется автоматически зачтённым final project. Затем вернуться к своему месту в очереди либо перейти к [backend](03-backend-and-databases.md).

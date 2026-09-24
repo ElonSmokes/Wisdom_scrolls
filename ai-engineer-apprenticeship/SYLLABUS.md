@@ -1,163 +1,55 @@
-# 32-Week Syllabus
+# Учебная программа
 
-> **Статус:** самостоятельный 32-недельный трек. Актуальный рабочий порядок и конкретные ссылки по CUDA, Git/GitLab и остальным дисциплинам — [WORK_INTEGRATED_ROADMAP.md](WORK_INTEGRATED_ROADMAP.md). Недельные сроки ниже не обязательны при текущих производственных дедлайнах.
+[Roadmap и курсы](WORK_INTEGRATED_ROADMAP.md) · [Модули](modules/README.md) · [Прогресс](PROGRESS.md)
 
-This curriculum is designed for 8–10 focused hours per week. Extend the schedule rather than skipping exercises.
+Порядок: **CUDA → Git/GitLab → SRE → RAG**. Один активный курс, 3–5 часов в неделю. Номера старых файлов модулей сохранены для ссылок; они не задают порядок.
 
-## Phase 0 — Setup and baseline
+## Три вида завершения
 
-### Week 1
-Primary resources:
-- Python official tutorial: sections 1–4
-- GitHub Skills: Introduction to GitHub
+- **Курс:** выполнены требования провайдера, выдана награда.
+- **Практический модуль:** получен небольшой результат, который можно объяснить и подтвердить.
+- **Внутренняя проверка:** выполнены критерии [MASTER_EXAMS](exams/MASTER_EXAMS.md).
 
-Deliverables:
-- install Python 3.12+, VS Code, Git and Docker;
-- create a virtual environment;
-- write a 50–100 line CLI that reads a text file and prints basic statistics;
-- commit it without AI-generated implementation;
-- complete the baseline questionnaire in `modules/00-setup-and-baseline.md`.
+Эти события имеют разные даты. Полученный сертификат не откладывается до завершения большого проекта.
 
-## Phase 1 — Python foundations
+## Основная последовательность
 
-Primary course: **[Harvard CS50P: Introduction to Programming with Python](https://cs50.harvard.edu/python/)**. Official [certificate requirements](https://cs50.harvard.edu/python/certificate/) apply; repository mastery exams do not issue an external certificate.
+| Этап | Перед началом | Порядок | Практический финиш |
+|---|---|---|---|
+| Подготовка по необходимости | Доступ к выбранному курсу | [Setup](modules/00-setup-and-baseline.md): аккаунт, Python/NumPy, место заметок | Известно, где проходить следующий раздел |
+| 1. CUDA | Функции, циклы, массивы Python и ndarray NumPy | NVIDIA CUDA Python → assessment; [практика](modules/cuda-and-inference.md): данные → kernel → замер → inference | Объяснённый benchmark и, при доступе к profiler, профиль |
+| 2. Git/GitLab | Файлы и командная строка | [Git-модуль](modules/git-and-gitlab.md): commits/index → история → jobs → artifacts → rollback; затем экзамен GitLab | Восстановление учебной истории и карта pipeline |
+| 3. DevOps/SRE | Путь запроса через сервис, базовый pipeline | LFS162 → награда; [SRE-модуль](modules/observability-and-sre.md): метрика → SLO → alert → runbook | Обнаруженный учебный отказ и восстановление |
+| 4. RAG | Python/OOP, основы deep learning; PyTorch рекомендован курсом | NVIDIA Building RAG Agents → assessment; [ML/RAG-модуль](modules/04-ml-llm-and-capstone.md): baseline → retrieval → eval → доступ | Воспроизводимое сравнение качества |
 
-### Week 2 — Variables, expressions and conditionals
-Complete CS50P Week 0 and Week 1. Write three small programs from a blank file.
+Сроки, цены и условия внешних курсов находятся в roadmap. Перед покупкой проверять доступ и expiry. GPU нужен для самостоятельного GPU-запуска; облачная лаборатория курса имеет свои условия.
 
-### Week 3 — Loops and collections
-Complete CS50P Week 2. Build a log-line counter using lists, dictionaries and loops.
+## Остальные дисциплины — по потребности
 
-### Week 4 — Exceptions and libraries
-Complete CS50P Week 3 and Week 4. Build a resilient file-processing CLI with useful errors.
+| Если мешает… | Открыть | Минимальное действие |
+|---|---|---|
+| Чтение Python-кода или NumPy | [Python](modules/01-python-foundations.md) | Разобрать функцию и форму массива; при системном пробеле выбрать CS50P |
+| Пакет, процесс, контейнер, GPU | [Runtime/Linux/containers](modules/02-professional-python-and-systems.md) | Проследить запуск и один отказ на dev |
+| Endpoint, транзакция, миграция, запрос | [Backend/PostgreSQL](modules/03-backend-and-databases.md) | Контракт, негативный тест или query plan |
+| Оценка «стало лучше» без данных | [QA/evaluation](modules/quality-and-evaluation.md) | Baseline и отдельные примеры для итоговой проверки |
+| Интерфейс и review flow | [Frontend/UX](modules/frontend-and-ux.md) | Один сценарий со всеми состояниями и клавиатурой |
+| Границы данных и доступов | [Security](modules/security-engineering.md) | Негативный сценарий на синтетических данных |
+| Решения и работа агентов | [Техническое лидерство](modules/technical-leadership.md) | ADR с критерием результата и владельцем риска |
 
-### Week 5 — Unit tests
-Complete CS50P Week 5. Add pytest tests before changing the CLI.
+Это упражнения по потребности. Завершать весь справочник перед следующим курсом не требуется.
 
-### Week 6 — Files and regular expressions
-Complete CS50P Week 6 and Week 7. Build a deterministic PII candidate extractor for email, phone and IDs.
+## Ритм недели
 
-### Week 7 — Object-oriented programming
-Complete CS50P Week 8. Refactor findings into typed objects with clear responsibilities.
+1. Одно-два занятия по 45–60 минут: теория и упражнения курса.
+2. Практический блок до двух часов: одна проверяемая гипотеза.
+3. Пять минут на [weekly review](templates/weekly-review.md): победа, затруднение, следующий раздел.
 
-### Week 8 — Final project
-Complete the CS50P final project: a document inspection CLI. It must have tests, logging and a README.
+Если неделя занята инцидентом, можно оставить одну запись с выводом. Повтор всей фазы из-за низкой оценки не требуется.
 
-### Week 9 — Python mastery gate
-Complete the [Python Exam](exams/MASTER_EXAMS.md#python-exam) under its stated conditions. Repeat the phase if the result is below 80% or you cannot explain your own code.
+## Общий проект
 
-## Phase 2 — Professional Python
+Модули можно применять к учебной системе обработки синтетических документов. Она не обязана быть копией production. [Capstone](modules/04-ml-llm-and-capstone.md) ограничен одним сценарием; deployment и демонстрация не означают готовность к боевым данным.
 
-Primary resources:
-- Python Packaging User Guide tutorials
-- pytest documentation: Getting Started
-- mypy Getting Started
-- Ruff documentation
+## Архив
 
-### Week 10 — Project structure and packaging
-Create `src/` and `tests/` layout, `pyproject.toml`, editable install and console entry point.
-
-### Week 11 — Types and data modelling
-Learn type hints, protocols, dataclasses, enums and Pydantic fundamentals. Run mypy in strict-enough mode.
-
-### Week 12 — Logging, configuration and debugging
-Use `logging`, environment-based configuration and the debugger. Remove all diagnostic `print()` calls.
-
-### Week 13 — Refactoring gate
-Refactor the Week 8 project without changing externally visible behaviour. Demonstrate tests first, small commits and an ADR.
-
-## Phase 3 — Linux, networking and Git
-
-Primary resources:
-- The Linux Command Line by William Shotts, selected chapters
-- Pro Git, chapters 1–3
-- MDN overview of HTTP
-
-### Week 14 — Linux operating model
-Files, permissions, processes, signals, services, logs, pipes, redirection, environment variables and SSH.
-
-### Week 15 — Networking and HTTP
-IP, routes, ports, DNS, TCP, TLS, HTTP methods and status codes. Diagnose a deliberately broken local service.
-
-### Week 16 — Git as an engineering tool
-Branches, merges, rebase, conflicts, revert, bisect and pull requests. Reconstruct a bug using Git history.
-
-## Phase 4 — Docker and Compose
-
-Primary resource: Docker official Get Started workshop and Dockerfile reference.
-
-### Week 17 — Images and containers
-Build an image manually. Explain every Dockerfile instruction, image layer, build context, CMD and ENTRYPOINT.
-
-### Week 18 — Storage and networking
-Volumes, bind mounts, user IDs, bridge networks, DNS, health checks and graceful shutdown.
-
-### Week 19 — Compose boss fight
-Run the CLI/API, PostgreSQL and a worker through Compose. Complete the [Docker Exam](exams/MASTER_EXAMS.md#docker-exam) without agent implementation.
-
-## Phase 5 — Backend engineering and databases
-
-Primary resources:
-- FastAPI official tutorial
-- SQLBolt lessons
-- PostgreSQL official tutorial
-- Alembic tutorial
-
-### Week 20 — HTTP API fundamentals
-Build endpoints, request/response models, validation and error handling.
-
-### Week 21 — Application architecture
-Separate transport, service and repository layers. Learn dependency injection without creating abstraction theatre.
-
-### Week 22 — SQL and PostgreSQL
-Tables, constraints, joins, indexes, transactions and query plans. Use raw SQL before an ORM.
-
-### Week 23 — SQLAlchemy and migrations
-Persist document jobs and findings. Add migrations, rollback instructions and transaction tests.
-
-### Week 24 — Backend mastery project
-Build a tested document-analysis job API with PostgreSQL, background processing, authentication stub and Compose.
-
-## Phase 6 — ML and LLM foundations
-
-Primary resources:
-- Google Machine Learning Crash Course
-- Hugging Face NLP/LLM Course, chapters 1–5 and relevant inference sections
-- The Illustrated Transformer
-
-### Week 25 — ML foundations and evaluation
-Train/validation/test splits, leakage, precision, recall, F1, confusion matrices, thresholds and baselines.
-
-### Week 26 — Embeddings and retrieval
-Tokenization, embedding vectors, similarity, chunking, retrieval metrics and reranking. Build retrieval without a framework first.
-
-### Week 27 — Transformers and inference
-Attention, transformer blocks, causal language modelling, context windows, batching and decoding parameters.
-
-### Week 28 — Local serving
-Study vLLM concepts: model loading, quantization, KV cache, continuous batching, tensor parallelism and OpenAI-compatible APIs. Complete the [LLM Systems Exam](exams/MASTER_EXAMS.md#llm-systems-exam).
-
-## Phase 7 — Production AI capstone
-
-### Week 29 — Architecture and threat model
-Write requirements, data-flow diagram, ADRs, privacy boundary, failure modes and evaluation plan.
-
-### Week 30 — Implementation
-Build deterministic PII detection plus model-assisted review behind a typed service boundary. No whole-feature agent generation.
-
-### Week 31 — Evaluation and operations
-Create a labelled test set, precision/recall report, latency measurements, structured logs, health checks and backup/restore procedure.
-
-### Week 32 — Final defence
-Demonstrate the system, explain every component, reproduce deployment from a clean machine and document known limitations.
-
-## Graduation standard
-
-You graduate only when you can:
-
-1. implement a non-trivial Python feature from a written requirement;
-2. diagnose a failing Linux/Docker service methodically;
-3. build and test a FastAPI/PostgreSQL service;
-4. explain the LLM serving path from request to generated tokens;
-5. measure product quality instead of judging by demos;
-6. identify code you do not understand and refuse to ship it blindly.
+[Прежний 32-недельный syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) сохранён с поправленными относительными ссылками. Это исторический вариант.

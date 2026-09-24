@@ -1,45 +1,42 @@
-# Architecture Decision Record
+# ADR: [решение]
 
-## Title
+Дата:
+Статус: предложено / принято / заменено / отклонено
+Владелец:
+Связанный milestone:
 
-Short noun phrase.
+## Проблема и ограничения
 
-## Status
+Пользователь и задача:
+Baseline:
+Ограничения данных, сроков и эксплуатации:
+Что известно, что предполагается:
 
-Proposed / Accepted / Superseded / Rejected
+## Варианты
 
-## Context
+| Вариант | Польза | Стоимость и ограничения | Причина выбора / отказа |
+|---|---|---|---|
+| A | | | |
+| B | | | |
 
-What problem are we solving? What constraints matter? What evidence do we have?
+## Решение
 
-## Decision
+Выбранный подход и причина:
+Что меняется:
+Какие риски остаются и кто ими занимается:
 
-State the chosen approach plainly.
+## Проверка
 
-## Alternatives considered
+Критерий успеха:
+Наблюдение / test / benchmark:
+Результат или статус «ещё не проверено»:
+Вклад агента и что проверено человеком:
 
-### Alternative A
+## Возврат и пересмотр
 
-Benefits, costs and reason not chosen.
+Как остановить или откатить:
+Что происходит с данными:
+Условие пересмотра:
+Следующий небольшой шаг:
 
-### Alternative B
-
-Benefits, costs and reason not chosen.
-
-## Consequences
-
-### Positive
-
-What becomes easier or safer?
-
-### Negative
-
-What complexity, cost or limitation are we accepting?
-
-## Validation
-
-What test, benchmark, review or production signal will tell us whether this decision was sound?
-
-## Revisit trigger
-
-Name the concrete condition that should cause reconsideration.
+[Модуль лидерства](../modules/technical-leadership.md)

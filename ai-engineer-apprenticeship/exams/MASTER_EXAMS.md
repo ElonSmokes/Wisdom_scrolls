@@ -1,107 +1,135 @@
-# Mastery Exams
+# Внутренние проверки знаний
 
-All exams are closed-AI. Documentation is allowed unless the section says otherwise. Record start time, end time, mistakes and corrections.
+[Программа](../SYLLABUS.md) · [Модули](../modules/README.md) · [Прогресс](../PROGRESS.md)
 
-# Python Exam
+Это проверки собственного понимания. Они не выдают внешний сертификат и не влияют на уже полученную награду курса. Выбирать одну проверку после соответствующей практики, используя собственные учебные артефакты.
 
-Time: 180 minutes. Pass: 80% plus successful explanation.
+## Единая шкала
 
-## Part A — Concepts
+В каждой проверке пять пунктов, каждый оценивается **0–2**:
 
-Explain in your own words:
+| Балл | Основание |
+|---:|---|
+| 0 | Ответа/результата нет, существенная ошибка или результат только предполагается |
+| 1 | Частично верно: нужна содержательная подсказка, доказательство неполное или ограничение не объяснено |
+| 2 | Выполнено, объяснено своими словами; для практического пункта есть воспроизводимое наблюдение |
 
-1. mutable versus immutable values;
-2. scope and name resolution;
-3. exception propagation;
-4. iterator versus iterable;
-5. class composition versus inheritance;
-6. dependency injection without a framework;
-7. why tests should assert behaviour rather than implementation;
-8. text encoding and why UTF-8 decoding can fail.
+**Пройдено:** минимум 8/10 и каждый явно отмеченный критический пункт имеет 2 балла. Если нужна только теория, так и записать — она не закрывает практическую часть. Баллы оценивают эту попытку, не процент владения профессией.
 
-## Part B — Implementation
+Документацию и свой код использовать можно. На первой попытке объяснения и решения давать самостоятельно; агент может затем проверить, задать вопросы и помочь исправить пробел. Подсказанный ответ не записывать как самостоятельный до повторной проверки. Для внешних assessments действуют их собственные правила.
 
-Build a CLI that:
+Заложить 45–90 минут; длинную практику разделить. Не нужно пересдавать все модули из-за одного пробела. Запись: дата → пункт → балл → доказательство → что повторить. Не хранить здесь вопросы закрытых сертификационных экзаменов.
 
-- scans `.txt` files recursively;
-- computes SHA-256 hashes;
-- detects duplicate content;
-- extracts email candidates;
-- emits JSON;
-- processes unreadable files without terminating the entire run;
-- has at least eight meaningful tests.
+## CUDA and Inference
 
-No copied project code. Standard library and pytest are allowed.
+[Практика](../modules/cuda-and-inference.md).
 
-## Part C — Debugging
+1. На своём примере объяснить thread/block/grid, host/device и путь данных.
+2. Предсказать, когда копирование данных может перекрыть выигрыш kernel.
+3. **Критический:** показать корректность результата и различить kernel-only и end-to-end замеры с warmup/синхронизацией.
+4. Объяснить prefill/decode, веса/KV и границы применимости расчёта памяти.
+5. Показать исходные результаты одного сравнения и объяснить bottleneck или честно обоснованную неопределённость.
 
-Take a previously unseen broken Python program. Produce:
+## Git and GitLab
 
-- minimal reproduction;
-- root-cause explanation;
-- failing regression test;
-- smallest justified fix.
+[Практика](../modules/git-and-gitlab.md).
 
-# Docker Exam
+1. Нарисовать HEAD, branch, commits, index и working tree до/после своего изменения.
+2. Объяснить выбор merge/rebase/revert/reset в двух собственных сценариях.
+3. **Критический:** восстановить учебную историю и показать, что нужный результат сохранён.
+4. Проследить job/rules/runner до конкретного artifact или image digest; различить cache и artifact.
+5. **Критический:** показать учебный/staging rollback и проверку результата, включая совместимость данных при наличии БД.
 
-Time: 150 minutes. Pass: all critical tasks.
+## SRE and Recovery
 
-1. Write a Dockerfile for a Python API from a blank file.
-2. Run as a non-root user.
-3. Explain build context, layers and cache invalidation.
-4. Add Compose with API and PostgreSQL.
-5. Add health checks and persistent storage.
-6. Diagnose a DNS failure between services.
-7. Diagnose a permission failure on a mounted directory.
-8. Demonstrate graceful shutdown.
-9. Explain why `localhost` inside a container does not refer to the host or another service.
-10. Reduce an intentionally bloated image and justify each change.
+[Практика](../modules/observability-and-sre.md).
 
-Automatic failure:
+1. Определить пользовательский SLI, знаменатель, окно и предложенный SLO.
+2. Объяснить, почему зелёный healthcheck может сочетаться с проблемой пользователя.
+3. Показать обнаружение контролируемого отказа и действие alert.
+4. **Критический:** восстановить учебный сценарий по runbook и проверить результат.
+5. Назвать ограничение мониторинга и следующий полезный сигнал; различить отсутствие ошибок и отсутствие данных.
 
-- solving by repeated blind rebuilds;
-- copying an unexplained Dockerfile;
-- running everything privileged or as root to bypass the problem.
+## Python Exam
 
-# LLM Systems Exam
+[Практика](../modules/01-python-foundations.md).
 
-Time: 180 minutes. Pass: 80% and valid benchmark design.
+1. Объяснить mutable/immutable, scope и исключение на примере своей функции.
+2. Предсказать обычный и граничный результат до запуска.
+3. **Критический:** показать корректное поведение для обычного/пустого входа и ошибки чтения либо другого заявленного отказа.
+4. Изменить небольшое требование и добавить тест поведения, который ловит соответствующую ошибку.
+5. Воспроизвести запуск из инструкции и объяснить traceback без полного переписывания программы.
 
-## Explain
+## Docker Exam
 
-1. tokenization;
-2. attention;
-3. prefill and decode;
-4. KV cache;
-5. context-length memory pressure;
-6. quantization;
-7. tensor parallelism;
-8. TTFT versus throughput;
-9. continuous batching;
-10. why a fast model can still produce a bad product.
+[Практика](../modules/02-professional-python-and-systems.md).
 
-## Design
+1. Объяснить image/container, build context, запуск и runtime user.
+2. Проследить port/network/volume; объяснить localhost внутри контейнера.
+3. Найти причину одного воспроизводимого сбоя по данным, а не серии случайных rebuild.
+4. Показать завершение и повторный запуск сервиса с понятным состоянием.
+5. **Критический:** проверить сохранение данных и восстановление учебного stateful-компонента в отдельное окружение. Повышение до privileged ради обхода необъяснённой ошибки не засчитывается.
 
-Design a benchmark comparing two local models for legal-document analysis. Specify:
+## Backend and Data
 
-- hardware and serving configuration;
-- dataset and held-out split;
-- tasks and scoring rubric;
-- concurrency levels;
-- latency metrics;
-- quality metrics;
-- failure taxonomy;
-- reproducibility controls.
+[Практика](../modules/03-backend-and-databases.md).
 
-## Evaluation task
+1. Объяснить контракт endpoint, валидацию и серверное решение о доступе.
+2. Проследить границу транзакции и поведение повторного запроса.
+3. **Критический:** показать негативный тест отказа/rollback, подтверждающий отсутствие частичного состояния.
+4. Объяснить join и реальный query plan; обосновать наличие или отсутствие индекса.
+5. **Критический:** показать проверку данных после миграции и учебного восстановления; назвать ограничения отката.
 
-Given labelled PII spans and model predictions, calculate precision, recall and F1; inspect boundary errors; choose a threshold; and explain the cost of false positives versus false negatives for the actual product policy.
+## QA and Evaluation
 
-# Grading rule
+[Практика](../modules/quality-and-evaluation.md).
 
-An answer is not correct merely because the code runs. You must be able to explain:
+1. Задать поведение, baseline, метрику и критерий регрессии до изменения.
+2. Для TP=8, FP=2, FN=4 вычислить precision/recall и объяснить знаменатели.
+3. **Критический:** показать, как разделены настройка и итоговая проверка; происхождение и разметка примеров известны.
+4. Показать регрессионный кейс и объяснить, что именно он доказывает.
+5. Сравнить результаты с учётом размера выборки, ошибок и неопределённости; назвать решение о принятии изменения.
 
-- what assumptions it makes;
-- how it fails;
-- how it is tested;
-- what evidence supports the design.
+## Frontend and UX
+
+[Практика](../modules/frontend-and-ux.md).
+
+1. Объяснить путь действия пользователя до сохранённых данных.
+2. Показать loading/empty/error/success состояния и понятное восстановление после ошибки.
+3. **Критический:** подтвердить сохранение после reload и отсутствие ложного успеха при отказе API.
+4. Пройти основной сценарий клавиатурой и найти/исправить одну проблему, если она есть.
+5. Показать один обоснованный E2E-тест или воспроизводимый ручной сценарий и его ограничения.
+
+## Security Review
+
+[Практика](../modules/security-engineering.md).
+
+1. Нарисовать trust boundaries и путь чувствительных данных.
+2. Объяснить, где проверяются полномочия, и почему prompt не заменяет авторизацию.
+3. **Критический:** подтвердить на учебных пользователях, что чужие данные не возвращаются через проверяемые API/retrieval/export пути.
+4. Показать один разрешённый негативный сценарий injection/egress/секретов и результат.
+5. Назвать оставшиеся риски, владельца и ограничения проверки; не объявлять небольшой набор тестов полноценным аудитом.
+
+## LLM Systems Exam
+
+[Практика](../modules/04-ml-llm-and-capstone.md).
+
+1. Объяснить tokenization, attention и путь от вопроса до контекста и ответа.
+2. Различить retrieval quality, generation quality и latency.
+3. **Критический:** показать воспроизводимое сравнение baseline и одного изменения на отделённых данных.
+4. **Критический:** показать случай без ответа и контроль доступа к контексту для разных учебных пользователей.
+5. Обосновать следующий шаг: данные, retrieval, prompt, модель или fine-tune — на результатах, а не предположении.
+
+## Technical Leadership
+
+[Практика](../modules/technical-leadership.md).
+
+1. Назвать пользователя, проблему, baseline и критерий успеха.
+2. Сравнить альтернативы с учётом стоимости, данных и сопровождения.
+3. **Критический:** показать принятое решение с проверкой результата, владельцем и понятным следующим шагом.
+4. Объяснить, как проверены агентные изменения и как ограничен объём.
+5. Назвать условие пересмотра и способ возврата/остановки; передать процедуру так, чтобы её можно было повторить.
+
+## После проверки
+
+Записать результат в [PROGRESS](../PROGRESS.md). Если есть пробел, выбрать только один пункт для следующей попытки. При успешном завершении оформить [личную ачивку](../templates/achievement.md). Оценка курса и выдача его сертификата остаются у провайдера.

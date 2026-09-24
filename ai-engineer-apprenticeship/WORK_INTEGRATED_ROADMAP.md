@@ -2,7 +2,7 @@
 
 Проверено **24 сентября 2026**. Направление развития: **AI systems engineer / технический AI lead** — понимать вычисления, поставку и качество систем, которыми ты уже управляешь. Это ориентир навыков, а не присвоенный курсами уровень.
 
-**Сейчас открыть только первый курс из таблицы.** В очереди четыре этапа. Разделы по 11 дисциплинам ниже — справочник, к которому обращаемся по задаче. Старый 32-недельный syllabus — отдельный добровольный трек.
+**Сейчас открыть только первый курс из таблицы.** В очереди четыре этапа. Разделы по 11 дисциплинам ниже — справочник, к которому обращаемся по задаче. [Прежний 32-недельный syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) сохранён в архиве; [текущая программа](SYLLABUS.md) следует этой очереди.
 
 ## Основная очередь: закончить, получить награду, применить
 
@@ -42,6 +42,12 @@
 LFS162 проходить в порядке его глав: DevOps/SRE → cloud → containers → IaC → CI/CD → observability → SRE. Это вводный обзор, не полноценная подготовка Kubernetes-администратора. [Вход в курс](https://trainingportal.linuxfoundation.org/courses/introduction-to-devops-and-site-reliability-engineering-lfs162); [критерий выдачи badge](https://www.credly.com/org/the-linux-foundation/badge/lfs162-introduction-to-devops-and-site-reliability-).
 
 Перед RAG нужны уверенный Python/OOP и вводные знания deep learning; PyTorch/transfer learning рекомендованы. Если их не хватает, использовать разделы 5 и 10. После RAG — набор вопросов с эталонами, baseline retrieval, проверка доступа к документам и ошибок ответа. Сертификат курса и профессиональные экзамены NCA/NCP — разные награды.
+
+## Практика и проверки
+
+Для каждого основного этапа есть небольшое задание: [CUDA/inference](modules/cuda-and-inference.md) → [Git/GitLab](modules/git-and-gitlab.md) → [SRE](modules/observability-and-sre.md) → [ML/RAG](modules/04-ml-llm-and-capstone.md).
+
+[Карта всех модулей](modules/README.md) связывает остальные дисциплины с рабочими задачами. [Внутренние проверки](exams/MASTER_EXAMS.md) помогают увидеть пробелы; они не заменяют assessment провайдера и не отменяют полученный сертификат. Для записи достаточно одного [milestone](templates/milestone.md) или [эксперимента](templates/experiment.md).
 
 ## Награды по остальным дисциплинам — выбрать одну, когда понадобится
 

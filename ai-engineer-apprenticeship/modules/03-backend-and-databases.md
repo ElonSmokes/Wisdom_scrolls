@@ -1,77 +1,35 @@
-# Phase 5 — Backend Engineering and Databases
+# Backend и PostgreSQL
 
-## Mission
+[Карта модулей](README.md) · [Курсы и книги](../WORK_INTEGRATED_ROADMAP.md)
 
-Build a service whose behaviour is explicit, tested and understandable from HTTP request to database transaction.
+Вход: читать Python-функции и понимать HTTP request/response. Выбрать один endpoint или два запроса, не переписывать весь сервис.
 
-## Primary resources
+## Читать в таком порядке
 
-- FastAPI official tutorial
-- SQLBolt
-- PostgreSQL official tutorial
-- SQLAlchemy 2.0 Unified Tutorial
-- Alembic tutorial
+[FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/): validation, dependencies, testing → [Pydantic](https://pydantic.dev/docs/validation/latest/get-started/) → [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html) и [transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) → [SQLAlchemy](https://docs.sqlalchemy.org/en/20/tutorial/) → [Alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html).
 
-## Project: Document Job API
+Для SQL-основ можно выбрать CS50 SQL из roadmap. Для производительности: [EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) → [indexes](https://www.postgresql.org/docs/current/indexes.html) → [MVCC](https://www.postgresql.org/docs/current/mvcc.html). Разбирать план на реалистичном учебном размере данных.
 
-Build an API that can:
+## Практика A: контракт API
 
-- create a document-analysis job;
-- retrieve job status;
-- list findings;
-- mark a finding reviewed;
-- retry failed processing safely;
-- reject invalid input clearly;
-- preserve idempotency for duplicate requests.
+Учебный сценарий: создание задания обработки документа и получение статуса.
 
-## Required architecture
+1. Записать запрос, ответ, валидацию, правила доступа и поведение повторного запроса.
+2. Проследить путь transport → business logic → database transaction → response.
+3. Проверить успех, неверный вход, чужой ресурс и повтор операции.
+4. Смоделировать отказ до commit; убедиться, что нет частично записанного состояния.
+5. Различить задачу в памяти процесса и устойчивую очередь; объяснить, что произойдёт при restart.
 
-Use three clear layers:
+Не требуется создавать отдельный слой ради названия. Разделение кода должно помогать проверять поведение.
 
-1. HTTP transport: parsing, status codes and response models.
-2. Service layer: business rules and orchestration.
-3. Repository layer: persistence and transactions.
+## Практика B: данные
 
-Do not add abstractions unless they solve an observed problem.
+Подготовить синтетические jobs/findings с владельцами. Написать join и запрос по статусу. Снять plan до/после обоснованного индекса, сравнить время и фактическое число строк. Учесть цену записи и размер индекса.
 
-## Database requirements
+На dev применить миграцию, проверить данные и путь возврата. Downgrade не всегда восстанавливает удалённые данные; определить, где нужен backup или forward fix. Восстановить backup в отдельную пустую БД и проверить известные записи.
 
-- PostgreSQL, not SQLite, for the final project;
-- foreign keys and meaningful constraints;
-- indexes justified by a query;
-- migrations with upgrade and downgrade paths;
-- transaction boundaries documented;
-- test for concurrent or duplicate job creation;
-- seed data only for development.
+## Выход
 
-## Testing requirements
+Контракт и негативные тесты либо DB review с plan и результатом восстановления. [Backend and Data](../exams/MASTER_EXAMS.md#backend-and-data).
 
-- unit tests for business rules;
-- integration tests against PostgreSQL;
-- API tests for success and failure paths;
-- one test that proves rollback;
-- one test that proves idempotency;
-- no tests that merely mirror implementation details.
-
-## Boss fight
-
-Implement a new requirement without AI implementation:
-
-> A user may restore a masked value only if the finding belongs to a matter they can access. Every restoration must be audit logged, and duplicate restore requests must not create duplicate audit events.
-
-Before coding, write:
-
-- acceptance criteria;
-- data model change;
-- transaction boundary;
-- tests;
-- failure cases.
-
-## Exit criteria
-
-- can explain HTTP semantics and status choices;
-- can trace a request through all layers;
-- can write joins and transactions in raw SQL;
-- can create and reverse a migration;
-- can explain an index with `EXPLAIN` evidence;
-- can diagnose a failing integration test without asking an agent to rewrite the service.
+CS50P/SQL награды — по правилам провайдера; наш endpoint и DB review — личные ачивки. Далее по задаче [QA](quality-and-evaluation.md) и [Security](security-engineering.md).

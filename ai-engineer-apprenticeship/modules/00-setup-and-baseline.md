@@ -1,60 +1,35 @@
-# Phase 0 — Setup and Baseline
+# Подготовка и исходная точка
 
-## Mission
+[Карта модулей](README.md) · [План](../WORK_INTEGRATED_ROADMAP.md)
 
-Establish a reproducible learning environment and measure what you can do today without shame, performance, or AI implementation.
+Цель — начать ближайшее занятие. Если всё нужное уже работает, переходить к [CUDA](cuda-and-inference.md). Установка полного стека и самостоятельный CLI не являются входным экзаменом.
 
-## Setup checklist
+## Проверить один раз
 
-- [ ] Python 3.12 or newer installed
-- [ ] `python --version` and `pip --version` understood
-- [ ] Git installed and identity configured
-- [ ] VS Code with Python extension installed
-- [ ] Docker installed and `docker run hello-world` completed
-- [ ] Repository cloned locally
-- [ ] `.venv` created and activated
-- [ ] `pytest`, `ruff` and `mypy` installed
+- Есть вход в выбранный курс; понятны награда и срок доступа. Для проверки использовать [карточку курса](../templates/course-check.md).
+- Есть место для короткой заметки и сохранения выданного сертификата.
+- Для локальной Python-практики известны interpreter, виртуальное окружение и команда запуска. Для облачной лаборатории следовать требованиям курса.
+- Если нужен самостоятельный GPU-запуск, проверить доступ к учебной GPU-машине и её окружению. Без GPU можно читать, рассчитывать память и готовить код; GPU benchmark пока не отмечать выполненным.
+- Для Git-практики есть отдельный учебный репозиторий. Настройки GitLab production для упражнений не менять.
 
-## Baseline assignment
+## Диагностика на 15–20 минут
 
-Create `projects/baseline-text-inspector/` containing a program that:
+Без генерации готовых ответов попробовать объяснить:
 
-1. accepts a UTF-8 text file path;
-2. reports line, word and character counts;
-3. reports the ten most common words;
-4. handles missing files and decoding errors;
-5. returns a non-zero exit code on failure;
-6. has at least five tests;
-7. contains a README with run instructions.
+1. Что делает небольшая Python-функция с циклом, условием и массивом?
+2. Как узнать shape и dtype массива и что изменит их размер?
+3. Что происходит между запуском программы и получением результата?
+4. Чем CPU-данные отличаются от данных, размещённых на GPU?
+5. Какой один вопрос о своей системе хочется перестать угадывать?
 
-Restrictions:
+Статусы: «объясняю», «нужна подсказка», «пока не знаю». Процент квалификации из этого не вычисляется. При пробеле в пунктах 1–2 взять нужные темы [Python-модуля](01-python-foundations.md).
 
-- no AI-written implementation;
-- official Python documentation is allowed;
-- AI may explain a concept after you have written a specific question;
-- commit at least three meaningful increments.
+## Дополнительная ручная практика
 
-## Baseline questionnaire
+Если хочется проверить Python: прочитать синтетический текстовый файл, посчитать слова, обработать отсутствие файла. Это один небольшой пример, а не отдельный обязательный проект. Реализацию сначала попробовать самому; после попытки можно разбирать с агентом.
 
-Answer in `notes/baseline.md`:
+## Выход
 
-1. What happens between running `python app.py` and seeing output?
-2. What is the difference between a list, tuple, set and dictionary?
-3. What is an exception?
-4. What is a process? What is a port?
-5. What problem does Git solve that file copies do not?
-6. What is the difference between a Docker image and container?
-7. What makes an HTTP request valid?
-8. What is a database transaction?
-9. What is a model checkpoint?
-10. How would you measure whether a PII detector is good?
+В [PROGRESS](../PROGRESS.md) записаны выбранный курс, ближайший раздел и одно затруднение. Доступ подтверждается фактическим открытием нужного материала, не одной ссылкой в плане.
 
-Write "I do not know" where appropriate. The document is a diagnostic, not a performance.
-
-## Exit criteria
-
-- program runs on a clean clone;
-- tests pass;
-- you can explain every line;
-- no secrets or machine-specific paths are committed;
-- `PROGRESS.md` contains the evidence link and actual hours spent.
+Награда за setup — личная отметка «могу начать». Внешнего сертификата за подготовку нет.

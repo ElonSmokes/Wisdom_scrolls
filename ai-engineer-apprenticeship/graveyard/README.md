@@ -1,32 +1,33 @@
-# Engineering Graveyard
+# Разбор неудачных попыток
 
-This directory stores failed experiments, abandoned architectures and expensive mistakes.
+[Шаблоны](../templates/README.md) · [Wisdom Scrolls](../WISDOM_SCROLLS.md)
 
-A graveyard entry is not shame. It prevents the same failure from being paid for twice.
+Здесь можно сохранить полезный разбор, чтобы не повторять ту же ошибку. Пропущенное занятие не является инцидентом и не требует такого отчёта.
 
-## Entry template
+## Одна запись
 
-Create one Markdown file per meaningful failure:
+Имя файла: дата и короткое название, например `YYYY-MM-DD-short-name.md`. Это пример имени, не существующая запись.
 
 ```text
-YYYY-MM-DD-short-name.md
+Цель:
+Условия и предположения:
+Что наблюдалось:
+Доказательство / ID заметки:
+Причина: подтверждена / гипотеза / пока неизвестна
+Что пробовали и какие новые данные это дало:
+Как восстановились:
+Что изменим в следующей попытке:
+Когда есть смысл вернуться:
+Что полезного осталось:
 ```
 
-Include:
+Причина без подтверждения остаётся гипотезой. Не нужно переписывать историю как неизбежный успех. Агентные циклы тоже можно разбирать: что не проверялось между попытками, какая гипотеза осталась неявной.
 
-1. **Goal** — what was being attempted.
-2. **Context** — constraints and assumptions.
-3. **What happened** — observable failure, without drama.
-4. **Evidence** — logs, tests, metrics or commits.
-5. **Root cause** — known, suspected or explicitly unknown.
-6. **What was tried** — including agent loops and why they failed.
-7. **Lesson** — reusable engineering principle.
-8. **Revisit condition** — what would need to change before trying again.
-9. **Salvageable assets** — tests, utilities, datasets or design ideas worth keeping.
+## Учебные темы для будущих записей
 
-## Suggested first entries
+- Неудачный deployment из-за конфигурации.
+- Различие между ожидаемым и фактическим GPU benchmark.
+- Ложноположительное или пропущенное finding на синтетическом наборе.
+- Курс, у которого изменились доступ или условия награды.
 
-- ClearGate spaCy `LOC -> CITY` hallucination failure;
-- fragmented public legal-entity names bypassing the keep policy;
-- any deployment loop where repeated agent patches produced regressions;
-- an architecture that became too complex to evaluate reliably.
+Это предложения тем, не утверждения о реально произошедших событиях. Публичная запись должна обходиться без клиентских документов, credentials и внутренних адресов.

@@ -1,101 +1,48 @@
-# AI Usage Rules
+# Работа с AI во время обучения и разработки
 
-> **Сертификационные задания (24.09.2026):** для внешних курсов и экзаменов действуют правила их провайдера. Разрешение агентам писать рабочий код не переносится на graded assessments. В частности, GitLab запрещает AI на экзамене. Текущие награды и условия — [WORK_INTEGRATED_ROADMAP.md](WORK_INTEGRATED_ROADMAP.md), сохранение — [CREDENTIALS.md](CREDENTIALS.md).
+[Программа](SYLLABUS.md) · [Проверки знаний](exams/MASTER_EXAMS.md)
 
-> **Область применения:** запреты на AI-implementation, закрытые экзамены и правило 30 минут относятся к самостоятельным учебным упражнениям 32-недельного syllabus. В рабочих проектах агент может писать код и выполнять команды. Перед принятием значимого изменения человек проверяет постановку задачи, diff, тест или измерение результата, затронутые границы доступа, отказной сценарий и откат. При срочном инциденте сначала восстанавливаем сервис; учебный разбор делаем после. См. [WORK_INTEGRATED_ROADMAP.md](WORK_INTEGRATED_ROADMAP.md).
+Цель — сохранять понимание и возможность проверить результат, продолжая пользоваться агентами в ежедневной работе.
 
-The purpose of these rules is not purity. It is to prevent speed from silently replacing competence.
+## Три режима
 
-## The traffic-light system
+| Режим | Что делает агент | Что проверяешь ты |
+|---|---|---|
+| Рабочая реализация и лаборатория | Может писать код, конфигурацию, тесты, помогать с диагностикой | Требование, границы изменения, diff, данные проверки, отказ и откат |
+| Самостоятельная внутренняя проверка | После первой попытки — reviewer и объяснение пробелов | Свои ответы и решения до подсказки; затем повторный разбор слабого пункта |
+| Graded assessment внешнего курса/экзамена | Только то, что разрешено провайдером | Актуальные правила конкретного задания; рабочее разрешение на AI не переносится автоматически |
 
-### Green — always allowed
+В частности, запрет AI на экзамене GitLab отражён в [roadmap](WORK_INTEGRATED_ROADMAP.md). Настоящие экзаменационные вопросы не копировать в публичные заметки. Внутренние учебные задания репозитория не заменяют внешнюю аттестацию.
 
-- explain a concept using examples;
-- ask Socratic questions;
-- review code you already wrote;
-- explain an error after you have attempted diagnosis;
-- propose additional tests after you wrote the first tests;
-- critique an ADR, threat model or evaluation plan;
-- check documentation wording and spelling.
+## Один цикл работы
 
-### Yellow — allowed with an evidence note
+1. Сформулировать ожидаемое поведение и проверку результата.
+2. Назвать исходный commit/конфигурацию и ограничить задачу.
+3. Получить изменение; просмотреть diff и затронутые зависимости.
+4. Проверить обычный случай и значимый отказ; для измерений посмотреть исходные данные.
+5. Решить, принимать ли изменение, и записать оставшийся вопрос.
 
-- generate repetitive fixtures or boilerplate;
-- suggest refactoring alternatives;
-- draft configuration after you write and understand the first version;
-- produce a patch for a production emergency.
+Не нужно уметь воспроизвести весь framework вручную. Нужно понимать изменяемый участок, его контракт, риски и способ диагностики.
 
-For yellow use, add to the commit or weekly review:
+## Если диагностика застряла
+
+Воспроизвести ошибку, собрать traceback/log, сформулировать гипотезу и выбрать наблюдение, которое различает причины. Если несколько итераций не дают новых данных, уменьшить задачу.
+
+Обязательного ожидания «30 минут без помощи» нет. При инциденте сначала восстановить сервис доступным проверенным способом, затем сделать учебный разбор. Возврат к старой версии не должен уничтожать незакоммиченные изменения или нужные данные.
+
+## Короткая запись вклада AI
 
 ```text
-AI contribution:
-What it generated:
-What I verified:
-What I could reproduce without it:
+Задача и ожидаемый результат:
+Что сделал агент:
+Что проверил я:
+Доказательство: diff / тест / лог / измерение
+Что пока не понимаю:
+Следующий шаг или откат:
 ```
 
-### Red — prohibited during learning work
+Для каждого мелкого действия отдельный отчёт не требуется. Запись полезна для значимого изменения или учебного вывода. Шаблоны — [milestone](templates/milestone.md) и [weekly review](templates/weekly-review.md).
 
-- solving mandatory exercises before your attempt;
-- generating the entire feature or project;
-- replacing an exam or boss fight;
-- accepting code you cannot explain line by line;
-- retrying prompts until tests happen to pass;
-- asking the agent to "fix everything" without a failing test and diagnosis.
+## Что считать освоенным
 
-## The 30-minute rule
-
-Before asking AI to fix a bug:
-
-1. reproduce it;
-2. reduce it;
-3. read the traceback and relevant logs;
-4. state one or more hypotheses;
-5. perform at least one discriminating test.
-
-Then ask a narrow question containing evidence.
-
-## Required prompt shape
-
-Bad:
-
-> Dude, fix it properly and make no mistakes.
-
-Good:
-
-> Test `test_duplicate_job_is_idempotent` fails with this traceback. I traced the request through the service layer and suspect the repository commits before checking the idempotency key. Ask me diagnostic questions first; do not write a patch yet.
-
-## Stop condition
-
-Stop an agent loop when any of these is true:
-
-- three prompts have not improved the same failing test;
-- you stopped reading the full response;
-- you cannot state the current hypothesis;
-- changes span unrelated files;
-- you feel the urge to deploy merely to see whether it works.
-
-Return to the last known-good commit, write down the failure, and reduce scope.
-
-## Module restrictions
-
-| Phase | AI role |
-|---|---|
-| Setup and Python foundations | Tutor and reviewer only |
-| Professional Python | Reviewer; limited boilerplate after first implementation |
-| Linux, Git and Docker | Explain evidence; no blind command sequences |
-| Backend and databases | Architecture critique and code review |
-| ML/LLM foundations | Explain mathematics, review experiments, generate extra cases |
-| Capstone | Review and adversarial testing; no whole-feature generation |
-
-## Ownership test
-
-Before merging, answer yes to all:
-
-- Can I explain why this design was chosen?
-- Can I trace one request through the code?
-- Can I identify its failure modes?
-- Can I change it safely tomorrow?
-- Are tests proving behaviour rather than merely increasing coverage?
-
-If not, the work is not owned yet.
+Можно объяснить механизм, предсказать хотя бы один отказ и проверить результат. Скопированный успешный вывод без запуска и проверки не считается выполненной практикой. Если использована подсказка, это нормальная часть обучения; в самостоятельной проверке её просто отметить.
