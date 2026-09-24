@@ -20,7 +20,7 @@ Deliverables:
 
 ## Phase 1 — Python foundations
 
-Primary course: **Harvard CS50P: Introduction to Programming with Python**.
+Primary course: **[Harvard CS50P: Introduction to Programming with Python](https://cs50.harvard.edu/python/)**. Official [certificate requirements](https://cs50.harvard.edu/python/certificate/) apply; repository mastery exams do not issue an external certificate.
 
 ### Week 2 — Variables, expressions and conditionals
 Complete CS50P Week 0 and Week 1. Write three small programs from a blank file.
@@ -44,7 +44,7 @@ Complete CS50P Week 8. Refactor findings into typed objects with clear responsib
 Complete the CS50P final project: a document inspection CLI. It must have tests, logging and a README.
 
 ### Week 9 — Python mastery gate
-Complete `exams/python-exam.md` closed-book. Repeat the phase if the result is below 80% or you cannot explain your own code.
+Complete the [Python Exam](exams/MASTER_EXAMS.md#python-exam) under its stated conditions. Repeat the phase if the result is below 80% or you cannot explain your own code.
 
 ## Phase 2 — Professional Python
 
@@ -93,7 +93,7 @@ Build an image manually. Explain every Dockerfile instruction, image layer, buil
 Volumes, bind mounts, user IDs, bridge networks, DNS, health checks and graceful shutdown.
 
 ### Week 19 — Compose boss fight
-Run the CLI/API, PostgreSQL and a worker through Compose. Complete `exams/docker-exam.md` without agent implementation.
+Run the CLI/API, PostgreSQL and a worker through Compose. Complete the [Docker Exam](exams/MASTER_EXAMS.md#docker-exam) without agent implementation.
 
 ## Phase 5 — Backend engineering and databases
 
@@ -135,7 +135,7 @@ Tokenization, embedding vectors, similarity, chunking, retrieval metrics and rer
 Attention, transformer blocks, causal language modelling, context windows, batching and decoding parameters.
 
 ### Week 28 — Local serving
-Study vLLM concepts: model loading, quantization, KV cache, continuous batching, tensor parallelism and OpenAI-compatible APIs. Complete `exams/llm-exam.md`.
+Study vLLM concepts: model loading, quantization, KV cache, continuous batching, tensor parallelism and OpenAI-compatible APIs. Complete the [LLM Systems Exam](exams/MASTER_EXAMS.md#llm-systems-exam).
 
 ## Phase 7 — Production AI capstone
 
