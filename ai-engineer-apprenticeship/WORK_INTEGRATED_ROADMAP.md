@@ -1,6 +1,6 @@
 # Рабочий roadmap: AI systems engineering
 
-Обновлено: 23 сентября 2026. Приоритет: **CUDA/GPU inference → Git/GitLab → ближайший производственный риск**. Этот план заменяет календарный порядок `SYLLABUS.md`; старый 32-недельный syllabus остаётся как самостоятельный углублённый трек. Текущие отметки в `PROGRESS.md` не означают, что перечисленные ниже этапы уже пройдены.
+Обновлено: 24 сентября 2026. Приоритет: **CUDA/GPU inference → Git/GitLab → ближайший производственный риск**. Этот план заменяет календарный порядок `SYLLABUS.md`; старый 32-недельный syllabus остаётся как самостоятельный углублённый трек. Текущие отметки в `PROGRESS.md` не означают, что перечисленные ниже этапы уже пройдены.
 
 ## Как проходить при полной загрузке
 
@@ -12,17 +12,23 @@
 
 ## 1. CUDA, устройство GPU и LLM inference — начать сейчас (4–6 недель)
 
-### Курсы NVIDIA DLI: конкретный порядок
+### Начать здесь: открытые материалы NVIDIA
 
-Каталог NVIDIA за май 2026 перечисляет много независимых направлений. Для текущей работы с H200 и vLLM/SGLang пройти этот короткий маршрут; документация ниже нужна рядом с курсами, когда разбираешь измерения. Ссылки ведут на карточки NVIDIA; запись может потребовать входа, а цена и доступность меняются.
+1. [An Even Easier Introduction to CUDA — обновлённая статья NVIDIA](https://developer.nvidia.com/blog/even-easier-introduction-cuda/). Это открытый текст с примерами CUDA C++, без записи в DLI. На первом занятии разобрать host/device, kernel, threads/blocks и синхронизацию; достаточно одного примера сложения массивов. Исходный интерактивный DLI-курс T-AC-01 исключён из обязательного пути: пользователь обнаружил уведомление о прекращении записи 7 июля и доступа 31 декабря (год в процитированном уведомлении не указан).
+2. [NVIDIA Accelerated Python Tutorial](https://github.com/NVIDIA/accelerated-computing-hub/tree/main/tutorials/accelerated-python) — открытые notebooks, slides и инструкции запуска. Порядок для нашей задачи: Fundamentals 01 (NumPy, если нужно) → 03 (NumPy to CuPy) → 05 (Memory Spaces) → 06 (Asynchrony) → 07 (Devices, Streams and Memory) → Kernels 40 (Copy). Задача — объяснить перемещение данных и замерить небольшой GPU workload. Остальные разделы брать по необходимости. Читать можно сразу; GPU-запуск требует совместимого окружения. Лаборатория на твоём H200 в рамках этой проверки не запускалась.
+3. После этих упражнений — расчёт нагрузки, benchmark и profiling по документации в разделе ниже. DLI-курсы в следующем списке опциональны и не блокируют продвижение.
 
-1. [An Even Easier Introduction to CUDA](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+T-AC-01+V1) — вводный практикум (в каталоге 1 час). После него своими словами объяснить grid/block/thread, запуск kernel и обмен с памятью.
-2. [Fundamentals of Accelerated Computing With CUDA Python](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-10+V1) — основной практикум (в каталоге 8 часов). Сделать маленький эксперимент с kernel и замером. Курс использует Numba: он помогает понять CUDA, но не заменяет изучение внутренностей vLLM.
-3. [Sizing LLM Inference Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-18+V1) — после знакомства с prefill/decode (в каталоге 3 часа). Проверить на H200 расчёты VRAM, KV cache, throughput/latency и concurrency для одного фиксированного workload.
-4. [Optimizing CUDA Machine Learning Codes With NVIDIA Nsight Profiling Tools](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-03+V2) — после первого benchmark. Записать одну гипотезу о bottleneck, снять timeline/профиль и сравнить с исходными измерениями.
-5. [Find the Bottleneck: Optimize AI Pipelines With Nsight Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-14+V1) — дополнительно, если проблема находится на стыке CPU/GPU/передачи данных. Учебный пример там про видео; применять метод profiling к своему inference pipeline.
+### DLI-курсы: доступность записи не подтверждена
 
-Первый минимальный финиш — пункты 1–4 и объяснённый H200 benchmark; пятый брать по измеренному узкому месту. [Официальный каталог NVIDIA Learning Paths](https://www.nvidia.com/en-us/learn/learning-paths/) — для поиска актуальной карточки, если прямой URL переедет.
+Проверка 24.09.2026: открытая статья NVIDIA прочитана, README обоих официальных tutorial-репозиториев получены через GitHub. Карточки learn.nvidia.com при текстовом просмотре возвращают пустые поля и шаблон страницы; это **не подтверждает возможность записаться**. Ни цены, ни активность записи остальных DLI-курсов здесь не считаются проверенными. Старый PDF за май 2026 — источник названий, не актуальный реестр доступности.
+
+- [Fundamentals of Accelerated Computing With CUDA Python](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-10+V1) — опциональная DLI-лаборатория на Numba; открытый Python tutorial выше позволяет начать без неё.
+- [Sizing LLM Inference Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-FX-18+V1) — после знакомства с prefill/decode (в каталоге 3 часа). Проверить на H200 расчёты VRAM, KV cache, throughput/latency и concurrency для одного фиксированного workload.
+- [Optimizing CUDA Machine Learning Codes With NVIDIA Nsight Profiling Tools](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-03+V2) — после первого benchmark. Записать одну гипотезу о bottleneck, снять timeline/профиль и сравнить с исходными измерениями.
+- [Find the Bottleneck: Optimize AI Pipelines With Nsight Systems](https://learn.nvidia.com/courses/course-detail?course_id=course-v1%3ADLI+S-AC-14+V1) — дополнительно, если проблема находится на стыке CPU/GPU/передачи данных. Учебный пример там про видео; применять метод profiling к своему inference pipeline.
+
+
+Критерий первого финиша — объяснённый H200 benchmark и один профиль, независимо от прохождения DLI. Аналогичный статус «запись не подтверждена» относится к DLI-ссылкам в RAG-разделе ниже; прохождение курсов не является обязательным условием работы. [NVIDIA Learning Paths](https://www.nvidia.com/en-us/learn/learning-paths/) — общий каталог, который также может содержать устаревшие ссылки.
 
 **Порядок изучения:**
 
