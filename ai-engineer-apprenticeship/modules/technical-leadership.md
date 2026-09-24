@@ -1,26 +1,34 @@
-# Applied AI и техническое лидерство
+<a id="applied-ai-и-техническое-лидерство"></a>
 
-[Карта модулей](README.md) · [Книги и справочник](../WORK_INTEGRATED_ROADMAP.md)
+# Applied AI and technical leadership
 
-Цель — принимать проверяемые решения и организовывать работу людей и агентов так, чтобы результат можно было сопровождать.
+[Module map](README.md) · [Books and reference materials](../WORK_INTEGRATED_ROADMAP.md)
 
-## Читать по текущему вопросу
+The goal is to make verifiable decisions and organize people and agents so the result can be maintained.
 
-AI Engineering (Chip Huyen): evaluation/deployment/agents → [Google code review practices](https://google.github.io/eng-practices/review/) → The Manager’s Path по мере появления задач управления. Точные ссылки на книги находятся в разделе 11 roadmap. Это материалы для применения, не обязательная дополнительная очередь.
+<a id="читать-по-текущему-вопросу"></a>
 
-## Практика: одно реальное решение
+## Read for the current question
 
-1. Назвать пользователя, проблему, baseline и наблюдаемый критерий успеха.
-2. Рассмотреть минимум две альтернативы, включая простое решение без новой модели, если оно подходит.
-3. Записать стоимость эксплуатации, ограничения данных, риски, владельца и условие пересмотра.
-4. Разбить агентную работу на reviewable изменения: постановка → diff → проверка → решение о принятии.
-5. Описать поведение при отказе и план возврата/остановки.
-6. Передать короткую инструкцию так, чтобы следующий человек мог повторить действие. Если пока работаешь один, повторить самому после перерыва.
+AI Engineering (Chip Huyen): evaluation/deployment/agents → [Google code review practices](https://google.github.io/eng-practices/review/) → The Manager’s Path as management tasks arise. Exact book links are in roadmap section 11. These materials are for application, not a required additional queue.
 
-Оформить [ADR](../templates/adr.md). Различать факт, предположение и ещё не проверенную гипотезу. Нельзя делать вывод о качестве системы только из красивой demo или benchmark скорости.
+<a id="практика-одно-реальное-решение"></a>
 
-## Выход
+## Practice: one real decision
 
-Решение с доказательством, владельцем и ограниченным следующим шагом. [Technical Leadership](../exams/MASTER_EXAMS.md#technical-leadership).
+1. Name the user, problem, baseline, and observable success criterion.
+2. Consider at least two alternatives, including a simple solution without a new model if appropriate.
+3. Record operating cost, data constraints, risks, owner, and the trigger for reconsideration.
+4. Split agent work into reviewable changes: task definition → diff → verification → acceptance decision.
+5. Describe failure behavior and a rollback/stop plan.
+6. Hand over a short procedure that the next person can repeat. If you are working alone, repeat it yourself after a break.
 
-За завершённое решение — личная ачивка. LFS162 из основной очереди помогает с общей картиной delivery/SRE; отдельный управленческий сертификат в этом модуле не обещан.
+Write an [ADR](../templates/adr.md). Distinguish fact, assumption, and an untested hypothesis. Do not judge system quality solely from an attractive demo or a speed benchmark.
+
+<a id="выход"></a>
+
+## Outcome
+
+A decision with evidence, an owner, and a bounded next step. [Technical Leadership](../exams/MASTER_EXAMS.md#technical-leadership).
+
+A completed decision earns a personal achievement. LFS162 in the main queue helps with the delivery/SRE overview; this module does not promise a separate management certificate.

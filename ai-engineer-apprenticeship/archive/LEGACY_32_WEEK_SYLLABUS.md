@@ -1,8 +1,8 @@
-> **Архив от 24.09.2026.** Текст прежней программы сохранён для истории. Календарь, ограничения AI и критерии ниже не являются действующими требованиями. [Актуальная программа](../SYLLABUS.md). Пути в кодовых фрагментах считаются от корня курса; относительные Markdown-ссылки адаптированы.
+> **Archived on 24.09.2026.** The previous program is preserved for reference. The calendar, AI restrictions, and criteria below are not current requirements. [Current syllabus](../SYLLABUS.md). Paths in code snippets are relative to the course root; relative Markdown links have been adapted.
 
 # 32-Week Syllabus
 
-> **Статус:** самостоятельный 32-недельный трек. Актуальный рабочий порядок и конкретные ссылки по CUDA, Git/GitLab и остальным дисциплинам — [WORK_INTEGRATED_ROADMAP.md](../WORK_INTEGRATED_ROADMAP.md). Недельные сроки ниже не обязательны при текущих производственных дедлайнах.
+> **Status:** an independent 32-week track. The current work sequence and specific links for CUDA, Git/GitLab, and the other disciplines are in [WORK_INTEGRATED_ROADMAP.md](../WORK_INTEGRATED_ROADMAP.md). The weekly deadlines below are not mandatory under current production deadlines.
 
 This curriculum is designed for 8–10 focused hours per week. Extend the schedule rather than skipping exercises.
 

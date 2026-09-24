@@ -1,39 +1,47 @@
-# Эксперимент: [гипотеза]
+<a id="эксперимент-гипотеза"></a>
 
-Дата и автор:
-Учебная / рабочая задача:
-Статус: запланирован / выполнен / вывод предварительный
-Гипотеза и что могло бы её опровергнуть:
+# Experiment: [hypothesis]
 
-## Условия
+Date and author:
+Learning / work task:
+Status: planned / completed / preliminary conclusion
+Hypothesis and what could disprove it:
 
-Данные / версия набора:
-Разделение tuning и итоговой проверки:
+<a id="условия"></a>
+
+## Conditions
+
+Data / dataset version:
+Separation of tuning and final evaluation:
 Hardware / software versions:
-Model / engine / quantization, если применимо:
-Workload: размер входа, output, concurrency, dtype:
+Model / engine / quantization, if applicable:
+Workload: input size, output, concurrency, dtype:
 Baseline:
-Единственный изменяемый фактор:
+The single factor being changed:
 
-## Измерение
+<a id="измерение"></a>
 
-Метод измерения и единицы:
-Warmup / синхронизация для GPU:
-Число повторений / наблюдений:
-Что включено во время, что исключено:
-Где лежат исходные результаты:
+## Measurement
 
-| Конфигурация | Корректность / качество | Метрика | Ошибки | Наблюдения |
+Measurement method and units:
+Warmup / synchronization for GPU:
+Number of repetitions / observations:
+What is included in the time and what is excluded:
+Where the raw results are stored:
+
+| Configuration | Correctness / quality | Metric | Errors | Observations |
 |---|---|---|---|---|
 | Baseline | | | | |
-| Изменение | | | | |
+| Change | | | | |
 
-## Вывод
+<a id="вывод"></a>
 
-Ожидание:
-Фактический результат:
-Ограничения и неопределённость:
-Принять / отклонить / нужны данные:
-Следующая гипотеза:
+## Conclusion
 
-Не заполнять фактические числа до измерения. Для LLM-eval сохранять метод разметки; для throughput — точное определение учитываемых токенов и времени.
+Expectation:
+Actual result:
+Limitations and uncertainty:
+Accept / reject / more data needed:
+Next hypothesis:
+
+Do not fill in actual numbers before measuring. For LLM evaluations, retain the labeling method; for throughput, retain the exact definition of counted tokens and time.

@@ -1,32 +1,42 @@
-# Observability и SRE
+<a id="observability-и-sre"></a>
 
-Основной этап 3. [LFS162 и награда](../WORK_INTEGRATED_ROADMAP.md) · [Карта модулей](README.md)
+# Observability and SRE
 
-Вход: понимать путь запроса и где выполняется сервис. Цель — замечать проблему пользователя и восстанавливать систему по воспроизводимой процедуре.
+Main stage 3. [LFS162 and its award](../WORK_INTEGRATED_ROADMAP.md) · [Module map](README.md)
 
-## Порядок
+Prerequisites: understanding the request path and where the service runs. The goal is to notice a user’s problem and recover the system using a reproducible procedure.
 
-LFS162 по программе → [Google SRE: SLO](https://sre.google/sre-book/service-level-objectives/) → [OpenTelemetry concepts](https://opentelemetry.io/docs/concepts/) → [Prometheus](https://prometheus.io/docs/prometheus/latest/getting_started/) → [Grafana fundamentals](https://grafana.com/tutorials/grafana-fundamentals/).
+<a id="порядок"></a>
 
-Из справочников брать разделы для одного сервиса. Не требуется разворачивать весь observability stack ради первого графика.
+## Order
 
-## Практика
+LFS162 in syllabus order → [Google SRE: SLO](https://sre.google/sre-book/service-level-objectives/) → [OpenTelemetry concepts](https://opentelemetry.io/docs/concepts/) → [Prometheus](https://prometheus.io/docs/prometheus/latest/getting_started/) → [Grafana fundamentals](https://grafana.com/tutorials/grafana-fundamentals/).
 
-1. Выбрать пользовательский сценарий: например, завершённая обработка документа. Определить успешный запрос, знаменатель, latency threshold и окно измерения.
-2. Сформулировать учебный SLO и объяснить выбор. Не объявлять его договорным production-обязательством без согласования.
-3. Связать запрос с логом и этапами обработки через correlation ID. Секреты и содержимое документов не нужны для latency-метрик.
-4. Построить график ошибок/задержки и alert, который ведёт к действию. Отличать «нет данных» от «ошибок нет».
-5. На dev остановить одну зависимость или задать контролируемую задержку. Записать время обнаружения, симптомы и восстановление.
-6. Повторить восстановление по своему runbook без опоры на память.
+Use the reference sections needed for one service. You do not need to deploy an entire observability stack for your first chart.
 
-## Runbook должен отвечать
+<a id="практика"></a>
 
-Как заметить отказ? Как проверить гипотезу? Какое действие допустимо? Когда остановиться и кому передать проблему? Как проверить, что пользовательский сценарий восстановлен?
+## Practice
 
-Для stateful-сервиса проверка восстановления включает чтение известных данных. Успешный запуск процесса ещё не подтверждает целостность данных.
+1. Choose a user scenario, such as completed document processing. Define a successful request, denominator, latency threshold, and measurement window.
+2. Set a learning SLO and explain the choice. Do not declare it a contractual production commitment without agreement.
+3. Connect the request to its log and processing stages using a correlation ID. Latency metrics do not require secrets or document contents.
+4. Build an error/latency chart and an alert that leads to an action. Distinguish “no data” from “no errors.”
+5. On dev, stop one dependency or introduce a controlled delay. Record detection time, symptoms, and recovery.
+6. Repeat recovery using your runbook rather than memory.
 
-## Выход
+<a id="runbook-должен-отвечать"></a>
 
-Одна метрика, один alert, один выполненный сценарий восстановления и [запись эксперимента](../templates/experiment.md). [Проверка SRE](../exams/MASTER_EXAMS.md#sre-and-recovery).
+## The runbook must answer
 
-Badge LFS162 выдаёт провайдер; runbook даёт личную ачивку. Затем основной [RAG-этап](04-ml-llm-and-capstone.md), а QA подключается к его измерениям.
+How do you detect the failure? How do you test the hypothesis? What action is allowed? When should you stop and escalate, and to whom? How do you verify that the user scenario has recovered?
+
+For a stateful service, the recovery check includes reading known data. A successful process start does not yet establish data integrity.
+
+<a id="выход"></a>
+
+## Outcome
+
+One metric, one alert, one completed recovery scenario, and an [experiment record](../templates/experiment.md). [SRE check](../exams/MASTER_EXAMS.md#sre-and-recovery).
+
+The provider issues the LFS162 badge; the runbook earns a personal achievement. Next is the main [RAG stage](04-ml-llm-and-capstone.md), with QA supporting its measurements.

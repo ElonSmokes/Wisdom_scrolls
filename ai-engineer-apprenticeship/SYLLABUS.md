@@ -1,55 +1,69 @@
-# Учебная программа
+<a id="учебная-программа"></a>
 
-[Roadmap и курсы](WORK_INTEGRATED_ROADMAP.md) · [Модули](modules/README.md) · [Прогресс](PROGRESS.md)
+# Syllabus
 
-Порядок: **CUDA → Git/GitLab → SRE → RAG**. Один активный курс, 3–5 часов в неделю. Номера старых файлов модулей сохранены для ссылок; они не задают порядок.
+[Roadmap and courses](WORK_INTEGRATED_ROADMAP.md) · [Modules](modules/README.md) · [Progress](PROGRESS.md)
 
-## Три вида завершения
+Sequence: **CUDA → Git/GitLab → SRE → RAG**. One active course, 3–5 hours per week. The numbered filenames of older modules are preserved for links; they do not determine the sequence.
 
-- **Курс:** выполнены требования провайдера, выдана награда.
-- **Практический модуль:** получен небольшой результат, который можно объяснить и подтвердить.
-- **Внутренняя проверка:** выполнены критерии [MASTER_EXAMS](exams/MASTER_EXAMS.md).
+<a id="три-вида-завершения"></a>
 
-Эти события имеют разные даты. Полученный сертификат не откладывается до завершения большого проекта.
+## Three kinds of completion
 
-## Основная последовательность
+- **Course:** the provider’s requirements have been met and the award issued.
+- **Practical module:** a small result has been produced that you can explain and substantiate.
+- **Internal check:** the criteria in [MASTER_EXAMS](exams/MASTER_EXAMS.md) have been met.
 
-| Этап | Перед началом | Порядок | Практический финиш |
+These events have separate dates. A course certificate does not have to wait for a large project to be finished.
+
+<a id="основная-последовательность"></a>
+
+## Main sequence
+
+| Stage | Before starting | Order | Practical finish |
 |---|---|---|---|
-| Подготовка по необходимости | Доступ к выбранному курсу | [Setup](modules/00-setup-and-baseline.md): аккаунт, Python/NumPy, место заметок | Известно, где проходить следующий раздел |
-| 1. CUDA | Функции, циклы, массивы Python и ndarray NumPy | NVIDIA CUDA Python → assessment; [практика](modules/cuda-and-inference.md): данные → kernel → замер → inference | Объяснённый benchmark и, при доступе к profiler, профиль |
-| 2. Git/GitLab | Файлы и командная строка | [Git-модуль](modules/git-and-gitlab.md): commits/index → история → jobs → artifacts → rollback; затем экзамен GitLab | Восстановление учебной истории и карта pipeline |
-| 3. DevOps/SRE | Путь запроса через сервис, базовый pipeline | LFS162 → награда; [SRE-модуль](modules/observability-and-sre.md): метрика → SLO → alert → runbook | Обнаруженный учебный отказ и восстановление |
-| 4. RAG | Python/OOP, основы deep learning; PyTorch рекомендован курсом | NVIDIA Building RAG Agents → assessment; [ML/RAG-модуль](modules/04-ml-llm-and-capstone.md): baseline → retrieval → eval → доступ | Воспроизводимое сравнение качества |
+| Setup as needed | Access to the chosen course | [Setup](modules/00-setup-and-baseline.md): account, Python/NumPy, a place for notes | You know where to work through the next section |
+| 1. CUDA | Python functions, loops, arrays, and NumPy ndarray | NVIDIA CUDA Python → assessment; [practice](modules/cuda-and-inference.md): data → kernel → measurement → inference | An explained benchmark and, when a profiler is available, a profile |
+| 2. Git/GitLab | Files and the command line | [Git module](modules/git-and-gitlab.md): commits/index → history → jobs → artifacts → rollback; then the GitLab exam | Recovery of practice history and a pipeline map |
+| 3. DevOps/SRE | Request path through a service, a basic pipeline | LFS162 → award; [SRE module](modules/observability-and-sre.md): metric → SLO → alert → runbook | A detected practice failure and recovery |
+| 4. RAG | Python/OOP, introductory deep learning; the course recommends PyTorch | NVIDIA Building RAG Agents → assessment; [ML/RAG module](modules/04-ml-llm-and-capstone.md): baseline → retrieval → evaluation → access | A reproducible quality comparison |
 
-Сроки, цены и условия внешних курсов находятся в roadmap. Перед покупкой проверять доступ и expiry. GPU нужен для самостоятельного GPU-запуска; облачная лаборатория курса имеет свои условия.
+Course schedules, prices, and conditions are in the roadmap. Check access and expiry before purchasing. A GPU is needed for independent GPU execution; the course’s cloud lab has its own conditions.
 
-## Остальные дисциплины — по потребности
+<a id="остальные-дисциплины--по-потребности"></a>
 
-| Если мешает… | Открыть | Минимальное действие |
+## Other disciplines — as needed
+
+| If the obstacle is… | Open | Smallest useful action |
 |---|---|---|
-| Чтение Python-кода или NumPy | [Python](modules/01-python-foundations.md) | Разобрать функцию и форму массива; при системном пробеле выбрать CS50P |
-| Пакет, процесс, контейнер, GPU | [Runtime/Linux/containers](modules/02-professional-python-and-systems.md) | Проследить запуск и один отказ на dev |
-| Endpoint, транзакция, миграция, запрос | [Backend/PostgreSQL](modules/03-backend-and-databases.md) | Контракт, негативный тест или query plan |
-| Оценка «стало лучше» без данных | [QA/evaluation](modules/quality-and-evaluation.md) | Baseline и отдельные примеры для итоговой проверки |
-| Интерфейс и review flow | [Frontend/UX](modules/frontend-and-ux.md) | Один сценарий со всеми состояниями и клавиатурой |
-| Границы данных и доступов | [Security](modules/security-engineering.md) | Негативный сценарий на синтетических данных |
-| Решения и работа агентов | [Техническое лидерство](modules/technical-leadership.md) | ADR с критерием результата и владельцем риска |
+| Reading Python code or NumPy | [Python](modules/01-python-foundations.md) | Understand a function and array shape; choose CS50P for a broader gap |
+| A package, process, container, or GPU | [Runtime/Linux/containers](modules/02-professional-python-and-systems.md) | Trace startup and one failure on dev |
+| An endpoint, transaction, migration, or query | [Backend/PostgreSQL](modules/03-backend-and-databases.md) | A contract, negative test, or query plan |
+| “It got better” without data | [QA/evaluation](modules/quality-and-evaluation.md) | A baseline and separate examples for the final evaluation |
+| An interface and review flow | [Frontend/UX](modules/frontend-and-ux.md) | One scenario covering every state and keyboard use |
+| Data and access boundaries | [Security](modules/security-engineering.md) | A negative scenario using synthetic data |
+| Decisions and agent work | [Technical leadership](modules/technical-leadership.md) | An ADR with an outcome criterion and risk owner |
 
-Это упражнения по потребности. Завершать весь справочник перед следующим курсом не требуется.
+These are exercises to use as needed. Completing the whole reference section is not required before the next course.
 
-## Ритм недели
+<a id="ритм-недели"></a>
 
-1. Одно-два занятия по 45–60 минут: теория и упражнения курса.
-2. Практический блок до двух часов: одна проверяемая гипотеза.
-3. Пять минут на [weekly review](templates/weekly-review.md): победа, затруднение, следующий раздел.
+## Weekly rhythm
 
-Если неделя занята инцидентом, можно оставить одну запись с выводом. Повтор всей фазы из-за низкой оценки не требуется.
+1. One or two 45–60-minute sessions: course theory and exercises.
+2. A practice block of up to two hours: one testable hypothesis.
+3. Five minutes for a [weekly review](templates/weekly-review.md): a win, an obstacle, and the next section.
 
-## Общий проект
+If an incident takes up the week, a single note with a lesson is enough. A low score does not require repeating an entire phase.
 
-Модули можно применять к учебной системе обработки синтетических документов. Она не обязана быть копией production. [Capstone](modules/04-ml-llm-and-capstone.md) ограничен одним сценарием; deployment и демонстрация не означают готовность к боевым данным.
+<a id="общий-проект"></a>
 
-## Архив
+## Shared project
 
-[Прежний 32-недельный syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) сохранён с поправленными относительными ссылками. Это исторический вариант.
+The modules can be applied to a learning system that processes synthetic documents. It does not have to copy production. The [capstone](modules/04-ml-llm-and-capstone.md) is limited to one scenario; deployment and a demo do not establish readiness for real work data.
+
+<a id="архив"></a>
+
+## Archive
+
+The [previous 32-week syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) is preserved with corrected relative links. It is a historical version.

@@ -1,37 +1,47 @@
-# Как поддерживать Wisdom_scrolls
+<a id="как-поддерживать-wisdom_scrolls"></a>
 
-Репозиторий хранит личный план обучения, практику и доказательства прогресса. Изменение программы не означает, что она уже пройдена.
+# Maintaining Wisdom_scrolls
 
-## Источники правды
+This repository holds a personal learning plan, practical exercises, and evidence of progress. Updating the program does not mean it has been completed.
 
-| Данные | Где менять |
+<a id="источники-правды"></a>
+
+## Sources of truth
+
+| Information | Where to update it |
 |---|---|
-| Порядок курсов, ссылки, prerequisites, цены, награды | [Roadmap](ai-engineer-apprenticeship/WORK_INTEGRATED_ROADMAP.md) |
-| Результаты проверки внешних ресурсов | [Аудит ссылок](ai-engineer-apprenticeship/LINK_AUDIT_2026-09-24.md) или новый датированный аудит |
-| Учебные переходы | [Syllabus](ai-engineer-apprenticeship/SYLLABUS.md) |
-| Практика и её результат | [Модули](ai-engineer-apprenticeship/modules/README.md) |
-| Реальные завершения и награды | [Progress](ai-engineer-apprenticeship/PROGRESS.md) |
+| Course sequence, links, prerequisites, prices, and awards | [Roadmap](ai-engineer-apprenticeship/WORK_INTEGRATED_ROADMAP.md) |
+| Results of checking external resources | [Link audit](ai-engineer-apprenticeship/LINK_AUDIT_2026-09-24.md) or a new dated audit |
+| Learning transitions | [Syllabus](ai-engineer-apprenticeship/SYLLABUS.md) |
+| Practical exercises and their outcomes | [Modules](ai-engineer-apprenticeship/modules/README.md) |
+| Actual completions and awards | [Progress](ai-engineer-apprenticeship/PROGRESS.md) |
 
-Не размножать цены и сроки по всем модулям. Ссылаться на roadmap; при его изменении проверить README, syllabus и очередь progress.
+Do not duplicate prices and access periods across every module. Refer to the roadmap; when it changes, check the README, syllabus, and progress queue.
 
-## Обновление курса
+<a id="обновление-курса"></a>
 
-Открыть полную карточку, проверить запись, expiry, prerequisites и награду. Заполнить [course-check](ai-engineer-apprenticeship/templates/course-check.md). Указать дату, первичный источник и границу проверки: публичная карточка или фактическая работа в аккаунте.
+## Updating a course
 
-Если виден retirement или запись отключена, убрать курс из активной очереди. Если сертификат не подтверждён, обозначить неизвестность. HTTP 200 не заменяет проверку содержания. Для новой ссылки добавить запись в датированный аудит; старые проверки не выдавать за сегодняшние.
+Open the full course page and check enrollment, expiry, prerequisites, and awards. Fill in a [course-check](ai-engineer-apprenticeship/templates/course-check.md). Record the date, primary source, and scope of verification: the public page or actual use within an account.
 
-## Обновление практики
+If a retirement notice appears or enrollment is disabled, remove the course from the active queue. If a certificate is unconfirmed, state that uncertainty. HTTP 200 does not replace checking the content. Add new links to a dated audit; do not present old checks as current ones.
 
-У каждого модуля должны быть вход, порядок чтения, небольшое задание, наблюдаемый выход и переход обратно в маршрут. Задание должно быть выполнимо на собственном учебном примере, без несуществующих файлов и неизвестного «сломанного проекта».
+<a id="обновление-практики"></a>
 
-Сохранять действующие пути или исправлять все ссылки на них. Архивы явно отмечать, относительные ссылки проверять с нового местоположения.
+## Updating an exercise
 
-## Перед публикацией
+Each module should have prerequisites, a reading order, a small task, an observable outcome, and a route back to the roadmap. The task must be doable using your own learning example, without nonexistent files or an unspecified “broken project.”
 
-- Проверить diff, внутренние пути и anchors.
-- Проверить, что основной маршрут остаётся коротким и prerequisites не образуют круг.
-- Убедиться, что нет выдуманных дат прохождения, баллов, certificates или incident history.
-- Не публиковать закрытые задания провайдера и рабочие данные клиентов.
-- Зафиксировать, какие проверки реально выполнены.
+Keep existing paths or fix every link to them. Clearly label archives and check relative links from their new locations.
 
-Записи о выданных наградах добавлять по факту. Файлы сертификатов публиковать только при желании владельца; для журнала достаточно разрешённой ссылки или ID.
+<a id="перед-публикацией"></a>
+
+## Before publishing
+
+- Review the diff, internal paths, and anchors.
+- Check that the main sequence stays short and prerequisites do not form a cycle.
+- Make sure there are no invented completion dates, scores, certificates, or incident histories.
+- Do not publish a provider’s restricted assignments or client work data.
+- Record which checks were actually performed.
+
+Add award records only after issuance. Publish certificate files only if their owner wants to; an approved link or ID is sufficient for the log.

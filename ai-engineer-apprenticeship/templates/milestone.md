@@ -1,31 +1,39 @@
-# Milestone: [один результат]
+<a id="milestone-один-результат"></a>
 
-Дата:
-Связанный курс / модуль:
-Статус: запланировано / в работе / проверено / нужна доработка
+# Milestone: [one result]
 
-## Задача
+Date:
+Related course / module:
+Status: planned / in progress / verified / needs revision
 
-Рабочая проблема:
-Моя гипотеза:
-Достаточный результат:
+<a id="задача"></a>
 
-## Работа и проверка
+## Task
 
-Ресурс и конкретный раздел:
-Окружение / версии:
-Что сделал агент:
-Что сделал или проверил я:
-Наблюдение / test / diff / измерение:
-Результат до → после:
-Ограничения вывода:
+Work problem:
+My hypothesis:
+Sufficient result:
 
-## Завершение
+<a id="работа-и-проверка"></a>
 
-Проверенный отказной сценарий:
-Как откатить или остановить:
-Доказательство / ID приватной заметки:
-Личная ачивка, если результат завершён:
-Следующее действие:
+## Work and verification
 
-Получение внешнего сертификата записывается отдельно в [PROGRESS](../PROGRESS.md). Этот milestone сам по себе его не выдаёт.
+Resource and exact section:
+Environment / versions:
+What the agent did:
+What I did or checked:
+Observation / test / diff / measurement:
+Result before → after:
+Limits of the conclusion:
+
+<a id="завершение"></a>
+
+## Completion
+
+Verified failure scenario:
+How to roll back or stop:
+Evidence / private note ID:
+Personal achievement if the result is complete:
+Next action:
+
+Receiving an external certificate is recorded separately in [PROGRESS](../PROGRESS.md). This milestone does not issue one by itself.

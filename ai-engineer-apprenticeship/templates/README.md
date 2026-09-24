@@ -1,16 +1,18 @@
-# Шаблоны
+<a id="шаблоны"></a>
 
-[Программа](../SYLLABUS.md) · [Прогресс](../PROGRESS.md)
+# Templates
 
-Выбирать одну форму по задаче; заполнять все сразу не нужно. Создание пустой заметки не является результатом.
+[Syllabus](../SYLLABUS.md) · [Progress](../PROGRESS.md)
 
-| Шаблон | Когда полезен | Время заполнения |
+Choose one form for the task; you do not need to fill in all of them. Creating an empty note is not an outcome.
+
+| Template | When useful | Time to fill in |
 |---|---|---|
-| [Weekly review](weekly-review.md) | Выбрать следующее занятие и отметить победу | Около 5 минут |
-| [Milestone](milestone.md) | Зафиксировать небольшой рабочий результат | Около 10 минут |
-| [Experiment](experiment.md) | Сравнить производительность или качество | По мере выполнения |
-| [ADR](adr.md) | Обосновать техническое решение | Около 10–20 минут |
-| [Course check](course-check.md) | Проверить доступ, expiry и награду перед стартом | Несколько минут |
-| [Achievement](achievement.md) | Подготовить личную ачивку к печати | После завершения |
+| [Weekly review](weekly-review.md) | Choose the next session and record a win | About 5 minutes |
+| [Milestone](milestone.md) | Record a small work result | About 10 minutes |
+| [Experiment](experiment.md) | Compare performance or quality | During the exercise |
+| [ADR](adr.md) | Justify a technical decision | About 10–20 minutes |
+| [Course check](course-check.md) | Check access, expiry, and award before starting | A few minutes |
+| [Achievement](achievement.md) | Prepare a personal achievement for printing | After completion |
 
-Копировать в удобные заметки. В публичном репозитории оставлять только предназначенные для публикации данные; внутреннее доказательство можно обозначить нейтральным ID. Не добавлять заранее успешные результаты, даты выдачи или verification IDs.
+Copy these into whichever notes you use. Keep only material intended for publication in the public repository; internal evidence can be referenced by a neutral ID. Do not fill in successful results, issuance dates, or verification IDs in advance.

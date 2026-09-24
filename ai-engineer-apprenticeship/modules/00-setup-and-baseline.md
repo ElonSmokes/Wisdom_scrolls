@@ -1,35 +1,45 @@
-# Подготовка и исходная точка
+<a id="подготовка-и-исходная-точка"></a>
 
-[Карта модулей](README.md) · [План](../WORK_INTEGRATED_ROADMAP.md)
+# Setup and starting point
 
-Цель — начать ближайшее занятие. Если всё нужное уже работает, переходить к [CUDA](cuda-and-inference.md). Установка полного стека и самостоятельный CLI не являются входным экзаменом.
+[Module map](README.md) · [Plan](../WORK_INTEGRATED_ROADMAP.md)
 
-## Проверить один раз
+The goal is to start the next session. If everything you need already works, move on to [CUDA](cuda-and-inference.md). Installing a full stack and independently writing a CLI are not entry exams.
 
-- Есть вход в выбранный курс; понятны награда и срок доступа. Для проверки использовать [карточку курса](../templates/course-check.md).
-- Есть место для короткой заметки и сохранения выданного сертификата.
-- Для локальной Python-практики известны interpreter, виртуальное окружение и команда запуска. Для облачной лаборатории следовать требованиям курса.
-- Если нужен самостоятельный GPU-запуск, проверить доступ к учебной GPU-машине и её окружению. Без GPU можно читать, рассчитывать память и готовить код; GPU benchmark пока не отмечать выполненным.
-- Для Git-практики есть отдельный учебный репозиторий. Настройки GitLab production для упражнений не менять.
+<a id="проверить-один-раз"></a>
 
-## Диагностика на 15–20 минут
+## Check once
 
-Без генерации готовых ответов попробовать объяснить:
+- You can access the chosen course; the award and access period are clear. Use the [course check](../templates/course-check.md).
+- You have a place for a short note and for saving the issued certificate.
+- For local Python practice, you know the interpreter, virtual environment, and run command. For a cloud lab, follow the course requirements.
+- If you need independent GPU execution, check access to a learning GPU machine and its environment. Without a GPU, you can read, calculate memory, and prepare code; do not mark the GPU benchmark complete yet.
+- You have a separate learning repository for Git practice. Do not change production GitLab settings for exercises.
 
-1. Что делает небольшая Python-функция с циклом, условием и массивом?
-2. Как узнать shape и dtype массива и что изменит их размер?
-3. Что происходит между запуском программы и получением результата?
-4. Чем CPU-данные отличаются от данных, размещённых на GPU?
-5. Какой один вопрос о своей системе хочется перестать угадывать?
+<a id="диагностика-на-1520-минут"></a>
 
-Статусы: «объясняю», «нужна подсказка», «пока не знаю». Процент квалификации из этого не вычисляется. При пробеле в пунктах 1–2 взять нужные темы [Python-модуля](01-python-foundations.md).
+## A 15–20-minute diagnostic
 
-## Дополнительная ручная практика
+Without generating ready-made answers, try to explain:
 
-Если хочется проверить Python: прочитать синтетический текстовый файл, посчитать слова, обработать отсутствие файла. Это один небольшой пример, а не отдельный обязательный проект. Реализацию сначала попробовать самому; после попытки можно разбирать с агентом.
+1. What does a small Python function with a loop, condition, and array do?
+2. How do you find an array’s shape and dtype, and what changes its size?
+3. What happens between starting a program and getting its output?
+4. How does CPU data differ from data placed on a GPU?
+5. What is one question about your system that you want to stop guessing about?
 
-## Выход
+Statuses: “can explain,” “need a hint,” and “do not know yet.” Do not calculate a qualification percentage from this. If items 1–2 reveal a gap, use the relevant topics in the [Python module](01-python-foundations.md).
 
-В [PROGRESS](../PROGRESS.md) записаны выбранный курс, ближайший раздел и одно затруднение. Доступ подтверждается фактическим открытием нужного материала, не одной ссылкой в плане.
+<a id="дополнительная-ручная-практика"></a>
 
-Награда за setup — личная отметка «могу начать». Внешнего сертификата за подготовку нет.
+## Additional manual practice
+
+If you want to test your Python: read a synthetic text file, count words, and handle a missing file. This is one small example, not a separate required project. Try the implementation yourself first; then you can review it with an agent.
+
+<a id="выход"></a>
+
+## Outcome
+
+Record the chosen course, next section, and one obstacle in [PROGRESS](../PROGRESS.md). Access is confirmed by actually opening the material you need, not by a link in the plan alone.
+
+The setup reward is a personal “ready to start” milestone. There is no external certificate for setup.

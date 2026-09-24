@@ -1,27 +1,35 @@
-# Python: чтение кода и самостоятельная основа
+<a id="python-чтение-кода-и-самостоятельная-основа"></a>
 
-[Карта модулей](README.md) · [Курсы и награды](../WORK_INTEGRATED_ROADMAP.md)
+# Python: reading code and building an independent foundation
 
-Открывать перед CUDA, если мешают функции/массивы, либо позже под задачу backend. Нужные темы можно разобрать выборочно. Для сертификата CS50P потребуется полная работа по требованиям курса.
+[Module map](README.md) · [Courses and awards](../WORK_INTEGRATED_ROADMAP.md)
 
-## Учиться по порядку
+Open this before CUDA if functions/arrays are an obstacle, or later for a backend task. You can review selected topics. The CS50P certificate requires completing the full work specified by the course.
 
-[CS50P](https://cs50.harvard.edu/python/): Functions/Variables → Conditionals → Loops → Exceptions → Libraries → Unit Tests → File I/O → Regular Expressions → OOP → Et Cetera → final project. [Python tutorial](https://docs.python.org/3/tutorial/) использовать для уточнения конкретного механизма.
+<a id="учиться-по-порядку"></a>
 
-Для CUDA дополнительно разобрать ndarray, shape, dtype и поэлементные операции на NumPy-примерах из материалов выбранного курса. Уверенное чтение простого массива важнее преждевременной сложной архитектуры.
+## Learn in order
 
-## Практика — выбрать один уровень
+[CS50P](https://cs50.harvard.edu/python/): Functions/Variables → Conditionals → Loops → Exceptions → Libraries → Unit Tests → File I/O → Regular Expressions → OOP → Et Cetera → final project. Use the [Python tutorial](https://docs.python.org/3/tutorial/) to clarify a specific mechanism.
 
-**Короткий:** взять небольшую функцию, назвать входы/выходы, предсказать результат на пустом и обычном входе, затем проверить. Изменить одно условие и объяснить последствия.
+For CUDA, also study ndarray, shape, dtype, and elementwise operations using NumPy examples in the chosen course’s materials. Confidently reading a simple array is more useful than premature architectural complexity.
 
-**Самостоятельный:** сделать CLI для синтетических текстовых файлов: число слов, ошибки чтения и JSON-результат. Для проверки подготовить пустой файл, обычный текст и отсутствующий путь. Тесты должны доказывать поведение, а не выполнять заданную квоту.
+<a id="практика--выбрать-один-уровень"></a>
 
-**Углубление:** добавить поиск дубликатов по содержимому, конфигурацию и нормальные сообщения об ошибках. Это учебный инструмент, не обещание точного PII detector.
+## Practice — choose one level
 
-На самостоятельной попытке сначала писать самому; агент может объяснять и разбирать результат. В graded CS50P-заданиях следовать актуальным правилам курса.
+**Short:** take a small function, identify its inputs/outputs, predict results for empty and ordinary inputs, then verify them. Change one condition and explain the consequences.
 
-## Выход
+**Independent:** build a CLI for synthetic text files: word count, read errors, and JSON output. Prepare an empty file, ordinary text, and a missing path for verification. Tests should prove behavior, not meet an arbitrary quota.
 
-Можно прочитать и изменить небольшую функцию, объяснить исключение и написать проверку граничного случая. [Python Exam](../exams/MASTER_EXAMS.md#python-exam) — внутренняя проверка.
+**Deeper:** add duplicate-content detection, configuration, and useful error messages. This is a learning tool, not a promise of an accurate PII detector.
 
-[Бесплатный CS50 Certificate](https://cs50.harvard.edu/python/certificate/) выдаётся только за выполнение требований CS50P. Наш CLI может стать идеей проекта, но не объявляется автоматически зачтённым final project. Затем вернуться к своему месту в очереди либо перейти к [backend](03-backend-and-databases.md).
+For an independent attempt, write it yourself first; an agent may explain and review the result. Follow the course’s current rules for graded CS50P assignments.
+
+<a id="выход"></a>
+
+## Outcome
+
+You can read and change a small function, explain an exception, and write a boundary-case check. [Python Exam](../exams/MASTER_EXAMS.md#python-exam) is an internal check.
+
+The [free CS50 Certificate](https://cs50.harvard.edu/python/certificate/) is issued only for meeting CS50P’s requirements. Our CLI can be a project idea, but it is not automatically an accepted final project. Then return to your place in the queue or move to [backend](03-backend-and-databases.md).

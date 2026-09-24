@@ -1,48 +1,60 @@
-# Работа с AI во время обучения и разработки
+<a id="работа-с-ai-во-время-обучения-и-разработки"></a>
 
-[Программа](SYLLABUS.md) · [Проверки знаний](exams/MASTER_EXAMS.md)
+# Working with AI during learning and development
 
-Цель — сохранять понимание и возможность проверить результат, продолжая пользоваться агентами в ежедневной работе.
+[Syllabus](SYLLABUS.md) · [Knowledge checks](exams/MASTER_EXAMS.md)
 
-## Три режима
+The goal is to retain understanding and the ability to verify results while continuing to use agents in daily work.
 
-| Режим | Что делает агент | Что проверяешь ты |
+<a id="три-режима"></a>
+
+## Three modes
+
+| Mode | What the agent does | What you verify |
 |---|---|---|
-| Рабочая реализация и лаборатория | Может писать код, конфигурацию, тесты, помогать с диагностикой | Требование, границы изменения, diff, данные проверки, отказ и откат |
-| Самостоятельная внутренняя проверка | После первой попытки — reviewer и объяснение пробелов | Свои ответы и решения до подсказки; затем повторный разбор слабого пункта |
-| Graded assessment внешнего курса/экзамена | Только то, что разрешено провайдером | Актуальные правила конкретного задания; рабочее разрешение на AI не переносится автоматически |
+| Work implementation and labs | May write code, configuration, and tests, and help with diagnosis | The requirement, scope of change, diff, verification data, failure behavior, and rollback |
+| Independent internal check | After the first attempt: review and explain gaps | Your own answers and decisions before hints; then another attempt at the weak point |
+| Graded assessment of an external course/exam | Only what the provider permits | The current rules for that assignment; permission to use AI at work does not automatically carry over |
 
-В частности, запрет AI на экзамене GitLab отражён в [roadmap](WORK_INTEGRATED_ROADMAP.md). Настоящие экзаменационные вопросы не копировать в публичные заметки. Внутренние учебные задания репозитория не заменяют внешнюю аттестацию.
+In particular, GitLab’s exam prohibition on AI is recorded in the [roadmap](WORK_INTEGRATED_ROADMAP.md). Do not copy actual exam questions into public notes. The repository’s internal exercises do not replace external assessment.
 
-## Один цикл работы
+<a id="один-цикл-работы"></a>
 
-1. Сформулировать ожидаемое поведение и проверку результата.
-2. Назвать исходный commit/конфигурацию и ограничить задачу.
-3. Получить изменение; просмотреть diff и затронутые зависимости.
-4. Проверить обычный случай и значимый отказ; для измерений посмотреть исходные данные.
-5. Решить, принимать ли изменение, и записать оставшийся вопрос.
+## One work cycle
 
-Не нужно уметь воспроизвести весь framework вручную. Нужно понимать изменяемый участок, его контракт, риски и способ диагностики.
+1. Define the expected behavior and how to verify it.
+2. Record the starting commit/configuration and limit the task.
+3. Receive the change; inspect the diff and affected dependencies.
+4. Verify the normal case and a significant failure; inspect raw data for measurements.
+5. Decide whether to accept the change and record the remaining question.
 
-## Если диагностика застряла
+You do not need to reproduce an entire framework by hand. You need to understand the changed area, its contract, risks, and how to diagnose it.
 
-Воспроизвести ошибку, собрать traceback/log, сформулировать гипотезу и выбрать наблюдение, которое различает причины. Если несколько итераций не дают новых данных, уменьшить задачу.
+<a id="если-диагностика-застряла"></a>
 
-Обязательного ожидания «30 минут без помощи» нет. При инциденте сначала восстановить сервис доступным проверенным способом, затем сделать учебный разбор. Возврат к старой версии не должен уничтожать незакоммиченные изменения или нужные данные.
+## If diagnosis gets stuck
 
-## Короткая запись вклада AI
+Reproduce the error, collect the traceback/log, state a hypothesis, and choose an observation that distinguishes possible causes. If several iterations yield no new data, reduce the problem.
+
+There is no mandatory “30 minutes without help” wait. During an incident, restore the service first using an available, verified method, then review the lesson. Returning to an older version must not destroy uncommitted changes or needed data.
+
+<a id="короткая-запись-вклада-ai"></a>
+
+## Short record of AI contribution
 
 ```text
-Задача и ожидаемый результат:
-Что сделал агент:
-Что проверил я:
-Доказательство: diff / тест / лог / измерение
-Что пока не понимаю:
-Следующий шаг или откат:
+Task and expected result:
+What the agent did:
+What I checked:
+Evidence: diff / test / log / measurement
+What I do not understand yet:
+Next step or rollback:
 ```
 
-Для каждого мелкого действия отдельный отчёт не требуется. Запись полезна для значимого изменения или учебного вывода. Шаблоны — [milestone](templates/milestone.md) и [weekly review](templates/weekly-review.md).
+Every small action does not need a separate report. A record is useful for a significant change or a learning insight. Templates: [milestone](templates/milestone.md) and [weekly review](templates/weekly-review.md).
 
-## Что считать освоенным
+<a id="что-считать-освоенным"></a>
 
-Можно объяснить механизм, предсказать хотя бы один отказ и проверить результат. Скопированный успешный вывод без запуска и проверки не считается выполненной практикой. Если использована подсказка, это нормальная часть обучения; в самостоятельной проверке её просто отметить.
+## What counts as understood
+
+You can explain the mechanism, predict at least one failure, and verify the result. Copying a successful output without running and checking it does not count as completed practice. Using a hint is a normal part of learning; simply record it in an independent check.

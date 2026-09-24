@@ -1,29 +1,39 @@
-# QA и LLM evaluation
+<a id="qa-и-llm-evaluation"></a>
 
-[Карта модулей](README.md) · [Справочник](../WORK_INTEGRATED_ROADMAP.md)
+# QA and LLM evaluation
 
-Цель — заменить впечатление от demo проверяемым сравнением. Открывать при изменении модели, prompt, правила или пользовательского сценария.
+[Module map](README.md) · [Reference materials](../WORK_INTEGRATED_ROADMAP.md)
 
-## Читать
+The goal is to replace a demo impression with a verifiable comparison. Open this when changing a model, prompt, rule, or user scenario.
 
-[pytest getting started](https://docs.pytest.org/en/stable/getting-started.html) → [Playwright](https://playwright.dev/docs/intro) для UI → [classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall). Курс TAU пока отложен согласно аудиту; он не является зависимостью этого модуля.
+<a id="читать"></a>
 
-## Практика
+## Read
 
-1. Зафиксировать задачу, версии и baseline. Написать критерий регрессии до изменения.
-2. Собрать небольшой синтетический набор: позитивные, негативные, пустые и неоднозначные случаи. Описать разметку и происхождение примеров.
-3. Разделить данные для настройки и итоговой проверки. Не подбирать prompt по итоговому набору.
-4. Для PII считать precision/recall по категориям, различать точное совпадение span и частичное. Для retrieval измерять нахождение релевантного источника отдельно от правильности ответа.
-5. Добавить детерминированные unit/integration/UI-тесты только на подходящее поведение. Статистические LLM-evals не выдавать за детерминированные unit tests.
-6. Сравнить до/после, разобрать ошибки и записать решение. Маленькая выборка и ноль замеченных утечек не доказывают абсолютную безопасность.
-7. Для CI зафиксировать gate: что блокирует релиз, что требует review, что просто наблюдается. Порог должен быть обоснован задачей.
+[pytest getting started](https://docs.pytest.org/en/stable/getting-started.html) → [Playwright](https://playwright.dev/docs/intro) for UI → [classification metrics](https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall). The TAU course is currently deferred according to the audit; it is not a dependency of this module.
 
-## Маленькая расчётная проверка
+<a id="практика"></a>
 
-Для синтетического детектора: TP=8, FP=2, FN=4. Самостоятельно вычислить precision и recall, затем объяснить, почему цена пропуска и ложного срабатывания может различаться. Это упражнение, а не измерение реального продукта.
+## Practice
 
-## Выход
+1. Record the task, versions, and baseline. Write the regression criterion before making the change.
+2. Assemble a small synthetic dataset: positive, negative, empty, and ambiguous cases. Describe labeling and example provenance.
+3. Separate tuning data from the final evaluation. Do not tune the prompt on the final set.
+4. For PII, calculate precision/recall by category, distinguishing exact span matches from partial ones. For retrieval, measure finding the relevant source separately from answer correctness.
+5. Add deterministic unit/integration/UI tests only for suitable behavior. Do not present statistical LLM evaluations as deterministic unit tests.
+6. Compare before/after, analyze errors, and record the decision. A small sample with no observed leaks does not prove absolute safety.
+7. Define the CI gate: what blocks a release, what requires review, and what is simply monitored. The threshold must be justified by the task.
 
-Есть версия набора, baseline, отчёт сравнения и хотя бы один регрессионный кейс. [QA and Evaluation](../exams/MASTER_EXAMS.md#qa-and-evaluation). Данные под корпоративным доступом не нужно переносить в публичный repo.
+<a id="маленькая-расчётная-проверка"></a>
 
-Награда за эту практику — личная ачивка. CS50P из roadmap даёт основы pytest и отдельный сертификат за весь курс; чтение pytest docs сертификата не обещает.
+## Small calculation check
+
+For a synthetic detector: TP=8, FP=2, FN=4. Independently calculate precision and recall, then explain why the costs of a missed detection and a false positive may differ. This is an exercise, not a measurement of a real product.
+
+<a id="выход"></a>
+
+## Outcome
+
+A dataset version, baseline, comparison report, and at least one regression case. [QA and Evaluation](../exams/MASTER_EXAMS.md#qa-and-evaluation). Data under corporate access controls does not need to be copied into a public repo.
+
+The reward for this practice is a personal achievement. CS50P from the roadmap provides pytest foundations and a separate certificate for the entire course; reading pytest docs does not promise a certificate.

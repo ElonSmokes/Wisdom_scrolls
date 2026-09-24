@@ -1,30 +1,34 @@
-# Личное достижение
+<a id="личное-достижение"></a>
 
-> Шаблон. Заполнять и печатать после выполнения. Это личная ачивка, не сертификат учебного провайдера.
+# Personal achievement
 
-## [Название завершённого результата]
+> Template. Fill in and print after completion. This is a personal achievement, not a certificate from a training provider.
 
-Имя:
-Дата завершения:
+<a id="название-завершённого-результата"></a>
 
-**Я сделал:**
+## [Name of the completed result]
 
-[Один конкретный результат.]
+Name:
+Completion date:
 
-**Теперь понимаю:**
+**What I did:**
 
-[Механизм своими словами.]
+[One specific result.]
 
-**Проверил:**
+**What I now understand:**
 
-[Измерение, тест, демонстрация или воспроизводимый пример.]
+[The mechanism in my own words.]
 
-**Доказательство:**
+**What I verified:**
 
-[Ссылка или нейтральный ID приватной заметки.]
+[A measurement, test, demonstration, or reproducible example.]
+
+**Evidence:**
+
+[A link or neutral ID for a private note.]
 
 ---
 
-Следующий маленький шаг:
+Next small step:
 
-Для печати скопировать заполненный лист, убрать подсказки и сохранить в PDF/A4. Не добавлять логотипы и названия выданных квалификаций, которых нет. Полученный сертификат провайдера сохранять в исходном виде по [инструкции](../CREDENTIALS.md).
+For printing, copy the completed sheet, remove the prompts, and save as PDF/A4. Do not add logos or titles of qualifications you have not earned. Keep an issued provider certificate in its original form using the [instructions](../CREDENTIALS.md).

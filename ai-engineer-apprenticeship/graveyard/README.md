@@ -1,33 +1,39 @@
-# Разбор неудачных попыток
+<a id="разбор-неудачных-попыток"></a>
 
-[Шаблоны](../templates/README.md) · [Wisdom Scrolls](../WISDOM_SCROLLS.md)
+# Reviews of unsuccessful attempts
 
-Здесь можно сохранить полезный разбор, чтобы не повторять ту же ошибку. Пропущенное занятие не является инцидентом и не требует такого отчёта.
+[Templates](../templates/README.md) · [Wisdom Scrolls](../WISDOM_SCROLLS.md)
 
-## Одна запись
+Keep a useful review here to avoid repeating the same mistake. A missed session is not an incident and does not require this report.
 
-Имя файла: дата и короткое название, например `YYYY-MM-DD-short-name.md`. Это пример имени, не существующая запись.
+<a id="одна-запись"></a>
+
+## One entry
+
+Filename: a date and short title, such as `YYYY-MM-DD-short-name.md`. This is a filename example, not an existing entry.
 
 ```text
-Цель:
-Условия и предположения:
-Что наблюдалось:
-Доказательство / ID заметки:
-Причина: подтверждена / гипотеза / пока неизвестна
-Что пробовали и какие новые данные это дало:
-Как восстановились:
-Что изменим в следующей попытке:
-Когда есть смысл вернуться:
-Что полезного осталось:
+Goal:
+Conditions and assumptions:
+What was observed:
+Evidence / note ID:
+Cause: confirmed / hypothesis / still unknown
+What was tried and what new data it produced:
+How recovery happened:
+What to change in the next attempt:
+When it is worth returning:
+What useful assets remain:
 ```
 
-Причина без подтверждения остаётся гипотезой. Не нужно переписывать историю как неизбежный успех. Агентные циклы тоже можно разбирать: что не проверялось между попытками, какая гипотеза осталась неявной.
+A cause without evidence remains a hypothesis. There is no need to rewrite history as inevitable success. Agent loops can also be reviewed: what was not checked between attempts and which hypothesis remained implicit.
 
-## Учебные темы для будущих записей
+<a id="учебные-темы-для-будущих-записей"></a>
 
-- Неудачный deployment из-за конфигурации.
-- Различие между ожидаемым и фактическим GPU benchmark.
-- Ложноположительное или пропущенное finding на синтетическом наборе.
-- Курс, у которого изменились доступ или условия награды.
+## Learning topics for future entries
 
-Это предложения тем, не утверждения о реально произошедших событиях. Публичная запись должна обходиться без клиентских документов, credentials и внутренних адресов.
+- A deployment that failed because of configuration.
+- A difference between expected and measured GPU benchmark results.
+- A false-positive or missed finding in a synthetic dataset.
+- A course whose access or award conditions changed.
+
+These are suggested topics, not claims about events that actually happened. Public entries should omit client documents, credentials, and internal addresses.

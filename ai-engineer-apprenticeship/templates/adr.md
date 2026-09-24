@@ -1,42 +1,54 @@
-# ADR: [решение]
+<a id="adr-решение"></a>
 
-Дата:
-Статус: предложено / принято / заменено / отклонено
-Владелец:
-Связанный milestone:
+# ADR: [decision]
 
-## Проблема и ограничения
+Date:
+Status: proposed / accepted / superseded / rejected
+Owner:
+Related milestone:
 
-Пользователь и задача:
+<a id="проблема-и-ограничения"></a>
+
+## Problem and constraints
+
+User and task:
 Baseline:
-Ограничения данных, сроков и эксплуатации:
-Что известно, что предполагается:
+Data, schedule, and operational constraints:
+What is known and what is assumed:
 
-## Варианты
+<a id="варианты"></a>
 
-| Вариант | Польза | Стоимость и ограничения | Причина выбора / отказа |
+## Options
+
+| Option | Benefit | Cost and limitations | Reason for choosing / rejecting |
 |---|---|---|---|
 | A | | | |
 | B | | | |
 
-## Решение
+<a id="решение"></a>
 
-Выбранный подход и причина:
-Что меняется:
-Какие риски остаются и кто ими занимается:
+## Decision
 
-## Проверка
+Chosen approach and reason:
+What changes:
+Remaining risks and who owns them:
 
-Критерий успеха:
-Наблюдение / test / benchmark:
-Результат или статус «ещё не проверено»:
-Вклад агента и что проверено человеком:
+<a id="проверка"></a>
 
-## Возврат и пересмотр
+## Verification
 
-Как остановить или откатить:
-Что происходит с данными:
-Условие пересмотра:
-Следующий небольшой шаг:
+Success criterion:
+Observation / test / benchmark:
+Result or “not yet verified” status:
+Agent contribution and what the human verified:
 
-[Модуль лидерства](../modules/technical-leadership.md)
+<a id="возврат-и-пересмотр"></a>
+
+## Rollback and reconsideration
+
+How to stop or roll back:
+What happens to the data:
+Trigger for reconsideration:
+Next small step:
+
+[Leadership module](../modules/technical-leadership.md)

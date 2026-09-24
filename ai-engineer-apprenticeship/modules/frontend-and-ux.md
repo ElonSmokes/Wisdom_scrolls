@@ -1,30 +1,38 @@
-# Frontend и проверка пользовательского сценария
+<a id="frontend-и-проверка-пользовательского-сценария"></a>
 
-[Карта модулей](README.md) · [Курс Full Stack Open и награда](../WORK_INTEGRATED_ROADMAP.md)
+# Frontend and user scenario verification
 
-Цель — понимать путь от действия пользователя до сохранённого результата. Агент может писать UI; человек проверяет поведение.
+[Module map](README.md) · [Full Stack Open course and award](../WORK_INTEGRATED_ROADMAP.md)
 
-## Порядок чтения
+The goal is to understand the path from a user action to a saved result. An agent may write the UI; the human checks its behavior.
 
-[MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development): HTML/CSS/HTTP → [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) → [React](https://react.dev/learn): state/effects → [Next.js](https://nextjs.org/learn), если он в стеке → [WAI](https://www.w3.org/WAI/tutorials/) → [Playwright](https://playwright.dev/docs/intro).
+<a id="порядок-чтения"></a>
 
-Full Stack Open — длинный факультатив для системного обучения. Небольшой UX review можно сделать раньше.
+## Reading order
 
-## Практика: один review flow
+[MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development): HTML/CSS/HTTP → [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html) → [React](https://react.dev/learn): state/effects → [Next.js](https://nextjs.org/learn) if it is in the stack → [WAI](https://www.w3.org/WAI/tutorials/) → [Playwright](https://playwright.dev/docs/intro).
 
-Выбрать «открыть finding → изменить решение → сохранить → увидеть результат после reload».
+Full Stack Open is a long elective for systematic learning. A small UX review can be done earlier.
 
-- Описать API contract и единственный источник сохранённого состояния.
-- Проверить loading, empty, success, validation error, server error и медленный ответ.
-- Проверить двойной submit, повтор после ошибки и несохранённые изменения.
-- Пройти сценарий клавиатурой: видимый focus, подписи полей, понятное сообщение об ошибке.
-- На dev воспроизвести недоступность API; интерфейс не должен показывать ложный успех.
-- Добавить один E2E-тест на критичный путь и один негативный сценарий, если они защищают значимый риск.
+<a id="практика-один-review-flow"></a>
 
-Скриншоты помогают review, но не заменяют проверку действия и сохранения данных. Не переносить секреты в browser bundle.
+## Practice: one review flow
 
-## Выход
+Choose “open a finding → change the decision → save → see the result after reload.”
 
-Короткая карта состояний, замечания с воспроизводимыми шагами и проверка после исправления. [Frontend and UX](../exams/MASTER_EXAMS.md#frontend-and-ux).
+- Describe the API contract and single source of saved state.
+- Check loading, empty, success, validation error, server error, and a slow response.
+- Check double submit, retry after error, and unsaved changes.
+- Complete the scenario using the keyboard: visible focus, field labels, and an understandable error message.
+- On dev, reproduce API unavailability; the interface must not show false success.
+- Add one E2E test for the critical path and one negative scenario if they protect against a significant risk.
 
-За свой сценарий — личная ачивка. Сертификат Full Stack Open требует выполнения его упражнений; наш UI review не заменяет сдачу курса.
+Screenshots help with review but do not replace checking the action and data persistence. Do not put secrets in the browser bundle.
+
+<a id="выход"></a>
+
+## Outcome
+
+A short state map, findings with reproduction steps, and a check after the fix. [Frontend and UX](../exams/MASTER_EXAMS.md#frontend-and-ux).
+
+Your scenario earns a personal achievement. The Full Stack Open certificate requires its exercises to be completed; our UI review does not replace course submissions.

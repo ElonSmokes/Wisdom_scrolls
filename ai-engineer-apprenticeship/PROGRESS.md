@@ -1,70 +1,84 @@
-# Прогресс и достижения
+<a id="прогресс-и-достижения"></a>
 
-[Текущий план](WORK_INTEGRATED_ROADMAP.md) · [Сохранение и печать наград](CREDENTIALS.md)
+# Progress and achievements
 
-Дата обновления плана: 24.09.2026. Проверка ссылок не означает прохождение курса. Ни одна награда здесь не отмечена полученной без подтверждения.
+[Current plan](WORK_INTEGRATED_ROADMAP.md) · [Saving and printing awards](CREDENTIALS.md)
 
-## Следующее занятие
+Plan updated: 24.09.2026. Checking links does not mean completing a course. No award is marked as received here without confirmation.
 
-Планируемое действие: открыть первый раздел CUDA Python после проверки Python/NumPy и доступа к курсу. Это предложение следующего шага; начало обучения пока не подтверждено.
+<a id="следующее-занятие"></a>
 
-Практика: [CUDA](modules/cuda-and-inference.md). Если мешает окружение — [setup](modules/00-setup-and-baseline.md). Если мешает Python — [нужный раздел](modules/01-python-foundations.md).
+## Next session
 
-## Очередь — один активный курс
+Planned action: open the first CUDA Python section after checking Python/NumPy and course access. This is a suggested next step; starting the course has not yet been confirmed.
 
-| Порядок | Этап | Статус в журнале | Дата старта / срок доступа | Полученная награда / подтверждение |
+Practice: [CUDA](modules/cuda-and-inference.md). If the environment is the obstacle: [setup](modules/00-setup-and-baseline.md). If Python is the obstacle: the [relevant section](modules/01-python-foundations.md).
+
+<a id="очередь--один-активный-курс"></a>
+
+## Queue — one active course
+
+| Order | Stage | Logged status | Start date / access period | Earned award / confirmation |
 |---|---|---|---|---|
-| 1 | NVIDIA CUDA Python | Запланирован, старт не подтверждён | — | — |
-| 2 | Pro Git + GitLab CI/CD Associate | В очереди; экзамен покупать после подготовки | — | — |
-| 3 | Linux Foundation LFS162 | В очереди | — | — |
-| 4 | NVIDIA Building RAG Agents | В очереди | — | — |
+| 1 | NVIDIA CUDA Python | Planned; start not confirmed | — | — |
+| 2 | Pro Git + GitLab CI/CD Associate | Queued; buy the exam after preparation | — | — |
+| 3 | Linux Foundation LFS162 | Queued | — | — |
+| 4 | NVIDIA Building RAG Agents | Queued | — | — |
 
-При выборе другого курса обновить очередь; не накапливать одновременно начатые программы.
+If you choose a different course, update the queue; do not accumulate multiple programs started at the same time.
 
-## Журнал наград
+<a id="журнал-наград"></a>
 
-| Дата | Точное название | Тип: сертификат / badge / личная ачивка | Verification URL или ID | Файл сохранён | Распечатано |
+## Award log
+
+| Date | Exact title | Type: certificate / badge / personal achievement | Verification URL or ID | File saved | Printed |
 |---|---|---|---|---|---|
-| — | Пока нет внесённых подтверждений | — | — | — | — |
+| — | No confirmations recorded yet | — | — | — | — |
 
-## Рабочие достижения
+<a id="рабочие-достижения"></a>
 
-| Задача | Результат | Доказательство | Статус |
+## Work achievements
+
+| Task | Result | Evidence | Status |
 |---|---|---|---|
-| CUDA / inference | Объяснённый benchmark: TTFT, ITL, VRAM и профиль | — | Не подтверждено в журнале |
-| GitLab | Карта pipeline и проверенный staging rollback | — | Не подтверждено в журнале |
-| SRE | Dashboard, один alert и runbook | — | Не подтверждено в журнале |
-| RAG | Retrieval baseline, eval и проверка доступа | — | Не подтверждено в журнале |
+| CUDA / inference | Explained benchmark: TTFT, ITL, VRAM, and a profile | — | Not confirmed in this log |
+| GitLab | Pipeline map and verified staging rollback | — | Not confirmed in this log |
+| SRE | Dashboard, one alert, and a runbook | — | Not confirmed in this log |
+| RAG | Retrieval baseline, evaluation, and access check | — | Not confirmed in this log |
 
-Курс может быть завершён и награда получена раньше рабочего проекта. Оба результата имеют свою дату.
+A course can be completed and its award received before the work project is finished. Both results have their own dates.
 
-## Внутренние проверки
+<a id="внутренние-проверки"></a>
 
-Это отдельный журнал для [проверок понимания](exams/MASTER_EXAMS.md); он не заполняется изменениями плана.
+## Internal checks
 
-| Дата | Проверка / пункт | Балл и критические пункты | Доказательство | Что повторить |
+This is a separate log for [understanding checks](exams/MASTER_EXAMS.md); changes to the plan do not fill it in.
+
+| Date | Check / item | Score and critical items | Evidence | What to repeat |
 |---|---|---|---|---|
-| — | Пока нет подтверждённых попыток | — | — | — |
+| — | No confirmed attempts yet | — | — | — |
 
-Статусы рабочего навыка: «не проверено», «с подсказкой», «самостоятельно показано». Общий процент квалификации из них не вычисляется. Исторические самооценки ниже сохранены как архив.
+Work skill statuses: “not checked,” “with a hint,” and “demonstrated independently.” These do not produce an overall qualification percentage. Earlier self-assessments are preserved below as an archive.
 
-## Недельная запись
+<a id="недельная-запись"></a>
 
-[Полный шаблон](templates/weekly-review.md) · [Личная ачивка](templates/achievement.md) · [Практические модули](modules/README.md)
+## Weekly entry
+
+[Full template](templates/weekly-review.md) · [Personal achievement](templates/achievement.md) · [Practical modules](modules/README.md)
 
 ```text
-Курс / раздел:
-Что закончил:
-Что теперь могу объяснить:
-Награда или маленькая победа:
-Одно затруднение:
-Следующее занятие:
+Course / section:
+What I finished:
+What I can now explain:
+Award or small win:
+One obstacle:
+Next session:
 ```
 
 <details>
-<summary>Архив: исходный самостоятельный трек и прежние самооценки</summary>
+<summary>Archive: the original independent track and earlier self-assessments</summary>
 
-Это исторические записи. Проценты ниже — прежняя самооценка, а не объективный измеритель нынешней квалификации. Они не задают текущую очередь.
+These are historical records. The percentages below are earlier self-assessments, not objective measurements of current ability. They do not determine the current queue.
 
 Start date: 2026-08-04
 

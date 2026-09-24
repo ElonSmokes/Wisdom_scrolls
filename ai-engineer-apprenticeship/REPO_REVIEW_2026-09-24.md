@@ -1,48 +1,60 @@
-# Обзор и обновление всего Wisdom_scrolls
+<a id="обзор-и-обновление-всего-wisdom_scrolls"></a>
 
-Дата: 24.09.2026. Исходный commit: `39f1126870c6d58035c2c0f016851e36382c9a55`.
+# Review and update of the entire Wisdom_scrolls repository
 
-Проверены все 18 исходных Markdown-файлов. Репозиторий содержит учебные документы; приложение или сервис здесь не запускались. Внешние адреса сверяются с [аудитом 110 ссылок](LINK_AUDIT_2026-09-24.md), выполненным ранее в этой сессии.
+Date: 24.09.2026. Starting commit: `39f1126870c6d58035c2c0f016851e36382c9a55`.
 
-## Что найдено и исправлено
+All 18 original Markdown files were reviewed. The repository contains learning documents; no application or service was run here. External addresses are checked against the [110-link audit](LINK_AUDIT_2026-09-24.md) performed earlier in this session.
 
-| Наблюдение | Изменение |
+<a id="что-найдено-и-исправлено"></a>
+
+## Findings and fixes
+
+| Observation | Change |
 |---|---|
-| README говорил о четырёх этапах, syllabus сохранял обязательный календарь на 32 недели | Действующий syllabus следует CUDA → Git/GitLab → SRE → RAG; исходник сохранён в archive |
-| Старые модули начинались с большого ручного Python-проекта | Setup стал короткой проверкой готовности; Python подключается по prerequisites |
-| Для CUDA/GitLab/SRE отсутствовала отдельная практика | Добавлены соответствующие модули с порядком, заданием и выходом |
-| QA, frontend, security и лидерство были только абзацами roadmap | Добавлены небольшие практические задания и проверки по этим дисциплинам |
-| Backend/ML/containers требовали большие проекты независимо от задачи | Объём ограничен одним endpoint, экспериментом или сценарием; capstone факультативный |
-| В экзаменах был pass 80% без распределения баллов | Единая шкала 0–2 за каждый из пяти пунктов; проход 8/10 и выполненные критические пункты |
-| Предлагался неизвестный сломанный проект без исходников | Проверки опираются на собственные воспроизводимые учебные артефакты |
-| AI-правила и weekly review подразумевали обязательный ручной код | Разделены рабочая помощь, самостоятельная проверка и правила провайдера |
-| Набор афоризмов выглядел как уже заработанный опыт | Текущие ориентиры названы гипотезами; для личных выводов требуется случай/доказательство; старые формулировки сохранены |
-| Graveyard перечислял конкретные «ошибки» без записи их обстоятельств | Темы обозначены как предложения; не создаётся выдуманная история инцидентов |
-| Шаблоны не покрывали курс, эксперимент и награду | Добавлены course-check, experiment, milestone и achievement |
-| Корневой README почти не помогал ориентироваться | Добавлены единая навигация и CONTRIBUTING с правилами обновления |
+| The README described four stages while the syllabus retained a mandatory 32-week calendar | The active syllabus follows CUDA → Git/GitLab → SRE → RAG; the original is preserved in archive |
+| Older modules began with a large manually coded Python project | Setup became a short readiness check; Python is added according to prerequisites |
+| CUDA/GitLab/SRE had no dedicated practice | Corresponding modules were added with an order, assignment, and outcome |
+| QA, frontend, security, and leadership were only paragraphs in the roadmap | Small exercises and checks were added for these disciplines |
+| Backend/ML/containers required large projects regardless of the task | Scope is limited to one endpoint, experiment, or scenario; the capstone is optional |
+| Exams specified an 80% pass without allocating points | A common 0–2 scale for each of five items; passing requires 8/10 and completed critical items |
+| An unspecified broken project was proposed without source files | Checks now use your own reproducible learning artifacts |
+| AI rules and the weekly review assumed mandatory manual coding | Work assistance, independent checks, and provider rules were separated |
+| Aphorisms appeared to represent experience already earned | Current principles are labeled hypotheses; personal lessons require a case/evidence; older wording is preserved |
+| The graveyard listed specific “mistakes” without their circumstances | Topics are labeled suggestions; no fictional incident history is created |
+| Templates did not cover a course, experiment, and award | course-check, experiment, milestone, and achievement were added |
+| The root README provided little navigation | Unified navigation and CONTRIBUTING update rules were added |
 
-## Что является источником правды
+<a id="что-является-источником-правды"></a>
 
-- Roadmap — курсы и условия наград.
-- Syllabus — последовательность и prerequisites.
-- Modules — практика; числовые имена старых файлов не задают порядок.
-- Progress — только фактические попытки и достижения.
-- Credentials — сохранение и печать.
-- Аудит ссылок — состояние источников на дату проверки.
-- Archive — история; его старые требования не применяются автоматически.
+## Sources of truth
 
-## Проверка после правок
+- Roadmap: courses and award conditions.
+- Syllabus: sequence and prerequisites.
+- Modules: practice; older numeric filenames do not determine the order.
+- Progress: only actual attempts and achievements.
+- Credentials: saving and printing.
+- Link audit: source status on the check date.
+- Archive: history; its old requirements do not automatically apply.
 
-Проверяются все относительные Markdown-ссылки и anchors, наличие указанных модулей/шаблонов, соответствие внешних адресов существующему реестру и согласованность основной очереди. Проверки знаний связаны с реальными модулями.
+<a id="проверка-после-правок"></a>
 
-Новые курсы, обещания наград и внешние адреса этой структурной редакцией не добавляются. Не отмечаются выданные сертификаты, пройденные экзамены, новые проценты навыков или выполненные лаборатории.
+## Verification after edits
 
-Перед публикацией сравнивается подготовленное содержимое с diff; после публикации повторно читаются изменённые файлы. Точный итог проверки и commit доступны в истории GitHub.
+Checks cover all relative Markdown links and anchors, the existence of referenced modules/templates, coverage of external addresses by the existing registry, and consistency of the main sequence. Knowledge checks link to actual modules.
 
-## Результат локальной проверки
+This structural revision adds no new courses, award promises, or external addresses. It records no issued certificates, passed exams, new skill percentages, or completed labs.
 
-Проверены **34 Markdown-файла**: все достижимы из корневого README, отсутствующих внутренних целей и anchors — **0**. Все **110 уникальных внешних адресов** входят в существующий аудит. Все **11 внутренних проверок** содержат пять оцениваемых пунктов и явно отмеченные критические условия. Новых внешних курсов не добавлено.
+Before publication, prepared content is compared against the diff; after publication, changed files are read again. The exact verification result and commit are available in GitHub history.
 
-## Начать после обновления
+<a id="результат-локальной-проверки"></a>
 
-Открыть [roadmap](WORK_INTEGRATED_ROADMAP.md), продолжить первый курс и использовать [CUDA-модуль](modules/cuda-and-inference.md) для одного маленького эксперимента. Остальные модули открывать по потребности.
+## Local verification result
+
+**34 Markdown files** were checked: all are reachable from the root README, with **0** missing internal targets or anchors. All **110 unique external addresses** are covered by the existing audit. All **11 internal checks** contain five scored items and explicitly marked critical conditions. No new external courses were added.
+
+<a id="начать-после-обновления"></a>
+
+## Starting after the update
+
+Open the [roadmap](WORK_INTEGRATED_ROADMAP.md), continue the first course, and use the [CUDA module](modules/cuda-and-inference.md) for one small experiment. Open other modules as needed.

@@ -1,29 +1,37 @@
-# Недельный обзор
+<a id="недельный-обзор"></a>
 
-Период:
-Активный курс / раздел:
-Доступное время на следующей неделе:
+# Weekly review
 
-## Что завершено
+Period:
+Active course / section:
+Available time next week:
 
-Один результат:
-Что теперь могу объяснить:
-Доказательство / ID заметки:
-Награда или маленькая победа:
+<a id="что-завершено"></a>
 
-## Что помогло и что мешает
+## What is complete
 
-Где помог агент:
-Что проверил я:
-Один оставшийся пробел:
-Нужна ли пауза из-за работы или срока доступа курса:
+One result:
+What I can now explain:
+Evidence / note ID:
+Award or small win:
 
-## Следующее занятие
+<a id="что-помогло-и-что-мешает"></a>
 
-Конкретное действие на 45–60 минут:
-Когда вернусь к нему:
-Что будет считаться достаточным результатом:
+## What helped and what is in the way
 
-Для рабочего проекта отдельно указать ближайший приоритет, если это помогает. Не превращать обзор в обязательный отчёт обо всех задачах.
+Where the agent helped:
+What I checked:
+One remaining gap:
+Is a pause needed because of work or the course access period:
 
-[Прогресс](../PROGRESS.md) · [AI-правила](../AI_USAGE_RULES.md)
+<a id="следующее-занятие"></a>
+
+## Next session
+
+A specific action for 45–60 minutes:
+When I will return to it:
+What will count as a sufficient result:
+
+For a work project, separately record the next priority if useful. Do not turn the review into a mandatory report on every task.
+
+[Progress](../PROGRESS.md) · [AI rules](../AI_USAGE_RULES.md)

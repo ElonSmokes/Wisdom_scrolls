@@ -1,34 +1,38 @@
-# Карта практики
+<a id="карта-практики"></a>
 
-[Программа](../SYLLABUS.md) · [Курсы и награды](../WORK_INTEGRATED_ROADMAP.md) · [Прогресс](../PROGRESS.md)
+# Practice map
 
-Основные этапы: **CUDA → Git/GitLab → SRE → RAG**. Остальные модули открывать для конкретного пробела. Один модуль можно пройти несколькими маленькими сессиями; весь каталог не является домашней работой на ближайший месяц.
+[Syllabus](../SYLLABUS.md) · [Courses and awards](../WORK_INTEGRATED_ROADMAP.md) · [Progress](../PROGRESS.md)
 
-| Дисциплина | Практический модуль | Результат |
+Main stages: **CUDA → Git/GitLab → SRE → RAG**. Open other modules for a specific gap. A module can take several small sessions; the whole catalog is not homework for the coming month.
+
+| Discipline | Practical module | Outcome |
 |---|---|---|
-| Подготовка | [Setup и baseline](00-setup-and-baseline.md) | Следующее занятие можно начать |
-| 1. CUDA/GPU inference | [CUDA и inference](cuda-and-inference.md) | Корректный замер, объяснение памяти и нагрузки |
-| 2. Git/GitLab | [Git и pipeline](git-and-gitlab.md) | Восстановление истории, карта доставки и откат |
-| 3. Observability/SRE | [SRE](observability-and-sre.md) | Метрика, alert, runbook и восстановление |
-| 4. QA/evaluation | [Качество и evaluation](quality-and-evaluation.md) | Регрессионная проверка и сравнение с baseline |
-| 5. Python/backend | [Python](01-python-foundations.md) → [Backend](03-backend-and-databases.md) | Объяснённая функция и контракт API |
-| 6. PostgreSQL/data | [Backend и базы](03-backend-and-databases.md) | Транзакция, query plan и проверенное восстановление |
-| 7. Linux/containers | [Runtime и системы](02-professional-python-and-systems.md) | Воспроизводимый запуск и диагностика отказа |
-| 8. Frontend/UX | [Frontend](frontend-and-ux.md) | Проверенный пользовательский сценарий |
-| 9. Security | [Границы доступа](security-engineering.md) | Threat model и негативные проверки |
-| 10. ML/RAG | [ML, RAG и capstone](04-ml-llm-and-capstone.md) | Измеренный retrieval baseline |
-| 11. Applied AI/leadership | [Техническое лидерство](technical-leadership.md) | Обоснованное решение и критерий приёмки |
+| Setup | [Setup and baseline](00-setup-and-baseline.md) | You can start the next session |
+| 1. CUDA/GPU inference | [CUDA and inference](cuda-and-inference.md) | A correct measurement and an explanation of memory and workload |
+| 2. Git/GitLab | [Git and pipelines](git-and-gitlab.md) | History recovery, a delivery map, and rollback |
+| 3. Observability/SRE | [SRE](observability-and-sre.md) | A metric, alert, runbook, and recovery |
+| 4. QA/evaluation | [Quality and evaluation](quality-and-evaluation.md) | A regression check and baseline comparison |
+| 5. Python/backend | [Python](01-python-foundations.md) → [Backend](03-backend-and-databases.md) | An explained function and API contract |
+| 6. PostgreSQL/data | [Backend and databases](03-backend-and-databases.md) | A transaction, query plan, and verified restore |
+| 7. Linux/containers | [Runtime and systems](02-professional-python-and-systems.md) | Reproducible startup and failure diagnosis |
+| 8. Frontend/UX | [Frontend](frontend-and-ux.md) | A verified user scenario |
+| 9. Security | [Access boundaries](security-engineering.md) | A threat model and negative checks |
+| 10. ML/RAG | [ML, RAG, and capstone](04-ml-llm-and-capstone.md) | A measured retrieval baseline |
+| 11. Applied AI/leadership | [Technical leadership](technical-leadership.md) | An evidence-based decision and acceptance criterion |
 
-## Общий порядок работы
+<a id="общий-порядок-работы"></a>
 
-1. Выбрать одну проблему, записать гипотезу.
-2. Прочитать указанный раздел; предсказать результат.
-3. Сделать маленькую практику в dev/учебном окружении.
-4. Проверить исходный результат, записать ограничения и следующий шаг.
-5. При желании пройти соответствующую [проверку знаний](../exams/MASTER_EXAMS.md).
+## General workflow
 
-[Агент может помогать с рабочей реализацией](../AI_USAGE_RULES.md). Внутренняя самостоятельная проверка и внешний assessment имеют отдельные правила.
+1. Choose one problem and record a hypothesis.
+2. Read the specified section; predict the result.
+3. Do a small exercise in a dev/learning environment.
+4. Check the raw result, record the limits, and choose the next step.
+5. Optionally take the corresponding [knowledge check](../exams/MASTER_EXAMS.md).
 
-Условия сертификатов хранятся в roadmap. За собственную практику — [личная ачивка](../templates/achievement.md). Учебные сроки и размеры наборов в модулях — предложенный масштаб упражнения, не стандарт production.
+[An agent may help with work implementation](../AI_USAGE_RULES.md). Independent internal checks and external assessments have separate rules.
 
-Для заметок можно завести у себя папку по теме с README, результатом и версиями окружения. Публиковать в этом репозитории только подходящие для публичного доступа материалы; наличие папки или шаблона не означает выполненную работу.
+Certificate conditions are kept in the roadmap. Your own practice earns a [personal achievement](../templates/achievement.md). The study times and dataset sizes in modules are suggested exercise scopes, not production standards.
+
+For notes, you can create a topic folder with a README, results, and environment versions. Publish only material suitable for public access in this repository; the presence of a folder or template does not mean the work is done.

@@ -1,36 +1,46 @@
-# Git и GitLab CI/CD
+<a id="git-и-gitlab-cicd"></a>
 
-Основной этап 2. [Курс и экзамен](../WORK_INTEGRATED_ROADMAP.md) · [Карта модулей](README.md)
+# Git and GitLab CI/CD
 
-Цель — понимать историю изменений и путь от commit до запущенного артефакта.
+Main stage 2. [Course and exam](../WORK_INTEGRATED_ROADMAP.md) · [Module map](README.md)
 
-## По порядку
+The goal is to understand change history and the path from a commit to a running artifact.
 
-1. [Pro Git](https://git-scm.com/book/en/v2): главы 1–3; затем поиск, переписывание истории, reset/debugging; objects/references выборочно.
-2. Объяснить working tree, index, commit, HEAD и branch pointer на своём учебном примере.
-3. Пройти GitLab learning path из roadmap.
-4. [CI quick start](https://docs.gitlab.com/ci/quick_start/) → [YAML](https://docs.gitlab.com/ci/yaml/) → [Runner](https://docs.gitlab.com/runner/). Функции сверять с версией своего GitLab.
+<a id="по-порядку"></a>
 
-## Практика A: история в отдельном репозитории
+## In order
 
-Создать текстовый файл и три маленьких коммита. Сделать две ветки с изменением одной строки; получить и осмысленно разрешить conflict. Отменить один опубликованный учебный commit через revert. В отдельной ветке восстановить потерянный указатель по reflog.
+1. [Pro Git](https://git-scm.com/book/en/v2): chapters 1–3; then searching, rewriting history, reset/debugging; selected objects/references sections.
+2. Explain the working tree, index, commit, HEAD, and branch pointer using your own learning example.
+3. Complete the GitLab learning path from the roadmap.
+4. [CI quick start](https://docs.gitlab.com/ci/quick_start/) → [YAML](https://docs.gitlab.com/ci/yaml/) → [Runner](https://docs.gitlab.com/runner/). Check features against your GitLab version.
 
-Для bisect сделать известный хороший commit, несколько изменений и commit с воспроизводимой ошибкой. Записать критерий good/bad до поиска. Цель — найденное изменение и объяснение, почему оно виновато.
+<a id="практика-a-история-в-отдельном-репозитории"></a>
 
-Перед изменением истории всегда понимать, какие commits доступны другим. Упражнение не требует force push в общую ветку.
+## Exercise A: history in a separate repository
 
-## Практика B: pipeline
+Create a text file and three small commits. Make two branches that change the same line; produce and deliberately resolve a conflict. Undo one published practice commit with revert. In a separate branch, recover a lost reference using reflog.
 
-На учебном проекте или разрешённом staging разобрать:
+For bisect, create a known good commit, several changes, and a commit with a reproducible error. Write down the good/bad criterion before searching. The goal is to find the change and explain why it caused the problem.
+
+Before changing history, always understand which commits are available to others. The exercise does not require force-pushing to a shared branch.
+
+<a id="практика-b-pipeline"></a>
+
+## Exercise B: pipeline
+
+In a learning project or authorized staging environment, trace:
 
 `commit → job/rules → runner → build → artifact/image digest → test → deploy → smoke check → rollback`.
 
-Различить artifacts и cache; указать, откуда берутся image, token и переменные. Создать или исправить один job с проверяемым результатом. Отрепетировать возврат предыдущего артефакта; заранее учесть, совместима ли с ним схема БД.
+Distinguish artifacts from cache; identify where the image, token, and variables come from. Create or fix one job with a verifiable result. Rehearse returning to a previous artifact; consider database schema compatibility beforehand.
 
-Если нет runner, закончить часть A и разбор YAML; исполнение pipeline оставить со статусом «не проверено». Зелёный статус нельзя записывать по одному чтению конфигурации.
+If no runner is available, finish part A and the YAML review; leave pipeline execution marked “not verified.” You cannot record a green status from reading the configuration alone.
 
-## Выход
+<a id="выход"></a>
 
-Есть схема pipeline, объяснённый diff и подтверждение восстановления на учебном стенде. [Проверка Git](../exams/MASTER_EXAMS.md#git-and-gitlab).
+## Outcome
 
-Экзамен GitLab покупать после подготовки: срок и условия находятся в roadmap. Личная ачивка за практику не заменяет GitLab certification. Следующий основной этап — [SRE](observability-and-sre.md).
+A pipeline diagram, an explained diff, and evidence of recovery on a learning environment. [Git check](../exams/MASTER_EXAMS.md#git-and-gitlab).
+
+Purchase the GitLab exam after preparation: the access window and conditions are in the roadmap. A personal practice achievement does not replace GitLab certification. The next main stage is [SRE](observability-and-sre.md).

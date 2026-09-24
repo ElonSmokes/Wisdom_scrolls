@@ -1,33 +1,37 @@
 # AI Engineer Apprenticeship
 
-Развитие в AI systems engineering: понимать вычисления, проверять агентные изменения и уверенно эксплуатировать AI-сервисы.
+Developing skills in AI systems engineering: understanding computation, reviewing agent-generated changes, and operating AI services confidently.
 
-## На сегодня
+<a id="на-сегодня"></a>
 
-1. Открыть [roadmap](WORK_INTEGRATED_ROADMAP.md) и проверить входные требования CUDA Python.
-2. Выбрать занятие на 45–60 минут. [Подготовка](modules/00-setup-and-baseline.md) нужна только для недостающих инструментов.
-3. После раздела сделать маленькую [CUDA-практику](modules/cuda-and-inference.md) и записать результат в [PROGRESS](PROGRESS.md).
-4. Завершив assessment курса, сохранить награду по [инструкции](CREDENTIALS.md). Рабочий эксперимент можно закончить позже.
+## For today
 
-При занятости уменьшается объём недели. Пропущенное занятие не требует начинать курс сначала.
+1. Open the [roadmap](WORK_INTEGRATED_ROADMAP.md) and check the entry requirements for CUDA Python.
+2. Choose a 45–60-minute session. [Setup](modules/00-setup-and-baseline.md) is only needed for missing tools.
+3. After a section, do a small [CUDA exercise](modules/cuda-and-inference.md) and record the result in [PROGRESS](PROGRESS.md).
+4. After completing the course assessment, save the award using the [instructions](CREDENTIALS.md). The work experiment can be finished later.
 
-## Навигация
+When work gets busy, reduce the week’s scope. Missing a session does not require restarting the course.
 
-| Документ | Роль |
+<a id="навигация"></a>
+
+## Navigation
+
+| Document | Role |
 |---|---|
-| [WORK_INTEGRATED_ROADMAP](WORK_INTEGRATED_ROADMAP.md) | Порядок курсов, внешние ссылки, prerequisites и условия наград |
-| [SYLLABUS](SYLLABUS.md) | Последовательность и переходы |
-| [modules/README](modules/README.md) | Практика по 11 дисциплинам и подготовка |
-| [MASTER_EXAMS](exams/MASTER_EXAMS.md) | Внутренние проверки с прозрачной шкалой |
-| [PROGRESS](PROGRESS.md) | Фактическое состояние и следующий шаг |
-| [CREDENTIALS](CREDENTIALS.md) | Награды и печать |
-| [AI_USAGE_RULES](AI_USAGE_RULES.md) | Работа, практика и внешние assessments |
-| [templates/README](templates/README.md) | Формы коротких записей |
-| [WISDOM_SCROLLS](WISDOM_SCROLLS.md) | Принципы и личные выводы |
-| [graveyard/README](graveyard/README.md) | Разбор неудачных попыток |
-| [Аудит ссылок](LINK_AUDIT_2026-09-24.md) | Что и как было проверено |
-| [Обзор репозитория](REPO_REVIEW_2026-09-24.md) | Согласованность программы |
+| [WORK_INTEGRATED_ROADMAP](WORK_INTEGRATED_ROADMAP.md) | Course sequence, external links, prerequisites, and award conditions |
+| [SYLLABUS](SYLLABUS.md) | Sequence and transitions |
+| [modules/README](modules/README.md) | Practice across 11 disciplines and setup |
+| [MASTER_EXAMS](exams/MASTER_EXAMS.md) | Internal checks with a transparent scoring system |
+| [PROGRESS](PROGRESS.md) | Actual status and next step |
+| [CREDENTIALS](CREDENTIALS.md) | Awards and printing |
+| [AI_USAGE_RULES](AI_USAGE_RULES.md) | Work, practice, and external assessments |
+| [templates/README](templates/README.md) | Short record formats |
+| [WISDOM_SCROLLS](WISDOM_SCROLLS.md) | Principles and personal lessons |
+| [graveyard/README](graveyard/README.md) | Reviews of unsuccessful attempts |
+| [Link audit](LINK_AUDIT_2026-09-24.md) | What was checked and how |
+| [Repository review](REPO_REVIEW_2026-09-24.md) | Consistency of the program |
 
-[Исходный 32-недельный syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) сохранён для истории. Его календарь и ограничения ручной реализации не действуют автоматически в текущем маршруте.
+The [original 32-week syllabus](archive/LEGACY_32_WEEK_SYLLABUS.md) is preserved for reference. Its calendar and manual implementation restrictions do not automatically apply to the current path.
 
-Публичные карточки курсов проверены 24.09.2026. Закрытые labs, покупка в конкретном аккаунте и выдача наград не тестировались.
+Public course pages were checked on 24.09.2026. Restricted labs, purchases within a specific account, and award issuance were not tested.

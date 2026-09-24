@@ -1,37 +1,45 @@
-# Проверка курса перед стартом
+<a id="проверка-курса-перед-стартом"></a>
 
-Дата проверки:
-Провайдер:
-Название и версия / course ID:
-Официальная ссылка:
-Кто проверил:
+# Course check before starting
 
-## Наблюдаемое состояние
+Check date:
+Provider:
+Title and version / course ID:
+Official link:
+Checked by:
 
-Карточка полностью загрузилась:
-Запись / покупка: доступна / отключена / не проверена
-Retirement / последний день записи:
-Дата окончания доступа или срок после старта:
-Лимиты лаборатории:
+<a id="наблюдаемое-состояние"></a>
+
+## Observed status
+
+The course page fully loaded:
+Enrollment / purchase: available / disabled / not checked
+Retirement / last enrollment date:
+Access end date or period after starting:
+Lab limits:
 Prerequisites:
-Стоимость и что именно включено:
-Доступность для моего аккаунта/региона: подтверждена / не проверена
+Cost and exactly what is included:
+Availability for my account/region: confirmed / not checked
 
-## Награда
+<a id="награда"></a>
 
-Точное название и тип: course certificate / badge / certification / нет
-Условия завершения:
-Где выдаётся и как сохраняется:
-Источник этих условий:
-Что осталось неизвестным:
+## Award
 
-## Решение
+Exact name and type: course certificate / badge / certification / none
+Completion requirements:
+Where it is issued and how to save it:
+Source of these conditions:
+What remains unknown:
 
-Статус: можно начать / отложен / исключён / нужна перепроверка
-Причина:
-Следующее действие:
-Запасной материал и его тип награды:
+<a id="решение"></a>
 
-Успешная загрузка страницы не доказывает доступ к lab или выдачу сертификата. Старый PDF не подтверждает текущую запись. Не покупать экзамен заранее, если после регистрации начинается короткое окно.
+## Decision
 
-[Roadmap](../WORK_INTEGRATED_ROADMAP.md) · [Аудит](../LINK_AUDIT_2026-09-24.md)
+Status: ready to start / deferred / excluded / needs rechecking
+Reason:
+Next action:
+Fallback material and its award type:
+
+A successfully loaded page does not prove lab access or certificate issuance. An old PDF does not confirm current enrollment. Do not buy an exam in advance if registration starts a short access window.
+
+[Roadmap](../WORK_INTEGRATED_ROADMAP.md) · [Audit](../LINK_AUDIT_2026-09-24.md)

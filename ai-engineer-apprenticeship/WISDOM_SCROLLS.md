@@ -1,38 +1,41 @@
 # Wisdom Scrolls
 
-Принципы для работы и место для выводов из собственного опыта. Пока у записи нет случая и доказательства, это рабочая гипотеза, а не утверждение о пройденном опыте.
+Principles for work and a place for lessons from your own experience. Until an entry has a case and evidence, it is a working hypothesis, not a claim of experience already gained.
 
-## Текущие ориентиры
+<a id="текущие-ориентиры"></a>
 
-1. Один завершённый шаг даёт опору для следующего. Сертификат, небольшой эксперимент и исправленный баг можно отмечать отдельно.
-2. Агентная скорость полезна, когда понятны контракт изменения и проверка результата.
-3. Зелёный тест подтверждает конкретное поведение в конкретных условиях.
-4. Если итерации не дают новых данных, уменьшить проблему и проверить гипотезу.
-5. Отсутствие ошибки в конечной выборке не доказывает отсутствие риска.
-6. Сначала baseline, затем одно изменение и сравнение.
-7. Восстановление — часть проекта: нужно проверить и данные, и пользовательский сценарий.
-8. Срок доступа и награда курса проверяются по актуальной карточке.
-9. Граница понимания должна быть видна в заметке; её можно постепенно двигать.
-10. Темп обучения должен помещаться в доступную неделю.
+## Current guiding principles
 
-## Как добавить собственный scroll
+1. One completed step supports the next. A certificate, small experiment, and fixed bug can be celebrated separately.
+2. Agent speed is useful when the change contract and result verification are clear.
+3. A green test confirms specific behavior under specific conditions.
+4. If iterations yield no new data, reduce the problem and test the hypothesis.
+5. No error in a finite sample does not prove the absence of risk.
+6. Establish a baseline, then make one change and compare.
+7. Recovery is part of the project: check both data and the user scenario.
+8. Check course access periods and awards on the current course page.
+9. The boundary of your understanding should be visible in the note; you can gradually move it.
+10. Your learning pace should fit the time available in the week.
+
+<a id="как-добавить-собственный-scroll"></a>
+
+## How to add your own scroll
 
 ```text
-Дата:
-Принцип:
-Случай, из которого он появился:
-Доказательство или ID приватной заметки:
-Где принцип применим:
-Где может оказаться неверным:
+Date:
+Principle:
+The case it came from:
+Evidence or private note ID:
+Where the principle applies:
+Where it might be wrong:
 ```
 
-Подтверждённые личные записи пока не добавлялись автоматически. Использовать [журнал прогресса](PROGRESS.md) и [разбор неудачной попытки](graveyard/README.md).
+No confirmed personal entries have been added automatically. Use the [progress log](PROGRESS.md) and [review of an unsuccessful attempt](graveyard/README.md).
 
 <details>
-<summary>Исходная подборка формулировок — сохранена для истории</summary>
+<summary>Original wording — preserved for reference</summary>
 
-Это прежние ориентиры. Абсолютные формулировки про ручной код не устанавливают текущих запретов; действуют [правила AI](AI_USAGE_RULES.md).
-
+These are earlier guiding principles. Absolute statements about manual coding do not impose current restrictions; the [AI rules](AI_USAGE_RULES.md) apply.
 
 Principles earned through practice. Add a scroll only when experience makes it real.
 

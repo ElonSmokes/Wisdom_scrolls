@@ -1,40 +1,50 @@
-# ML, RAG и небольшой capstone
+<a id="ml-rag-и-небольшой-capstone"></a>
 
-Основной этап 4. [NVIDIA RAG и prerequisites](../WORK_INTEGRATED_ROADMAP.md) · [Карта модулей](README.md)
+# ML, RAG, and a small capstone
 
-Вход: Python/OOP, основы deep learning; для курса рекомендована работа с PyTorch. Начинать с задачи и измеримого baseline.
+Main stage 4. [NVIDIA RAG and prerequisites](../WORK_INTEGRATED_ROADMAP.md) · [Module map](README.md)
 
-## По порядку
+Prerequisites: Python/OOP and introductory deep learning; the course recommends PyTorch experience. Start with a task and a measurable baseline.
+
+<a id="по-порядку"></a>
+
+## In order
 
 1. [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course): splits, overfitting, classification/evaluation.
-2. [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/) и [HF LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) — нужные пробелы, не обязательное чтение обоих курсов целиком.
-3. NVIDIA Building RAG Agents из roadmap → assessment.
-4. [Stanford IR](https://nlp.stanford.edu/IR-book/): retrieval/evaluation; [Qdrant docs](https://qdrant.tech/documentation/) — если он выбран для практики.
-5. PEFT/fine-tuning брать после baseline и доказанной потребности; ссылки и книги остаются в roadmap.
+2. [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/) and [HF LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) for relevant gaps, not mandatory completion of both entire courses.
+3. NVIDIA Building RAG Agents from the roadmap → assessment.
+4. [Stanford IR](https://nlp.stanford.edu/IR-book/): retrieval/evaluation; [Qdrant docs](https://qdrant.tech/documentation/) if chosen for the exercise.
+5. Take up PEFT/fine-tuning after establishing a baseline and a demonstrated need; links and books remain in the roadmap.
 
-## Практика: маленький поиск по документам
+<a id="практика-маленький-поиск-по-документам"></a>
 
-Подготовить около 20 синтетических документов и 20 вопросов. Добавить вопросы без ответа и документы разных учебных владельцев. Такой набор проверяет механику, а не доказывает production-качество.
+## Practice: a small document search system
 
-- Зафиксировать простой baseline, затем embedding retrieval и при необходимости reranking.
-- Для вопросов указать релевантные документы; отделить примеры для настройки от итоговой проверки.
-- Измерять retrieval отдельно от generation: найден ли источник, отвечает ли ответ на вопрос, подтверждён ли он источником, где система должна отказаться.
-- Проверить, что контекст и ответ не раскрывают документы другого владельца. Post-filter после генерации не заменяет контроль доступа.
-- Сравнить один параметр: chunk size, k или reranker. Сохранить конфигурации, сырые результаты и ошибки.
-- LLM-as-judge использовать с проверкой на размеченных примерах; не объявлять его оценку независимой истиной.
+Prepare about 20 synthetic documents and 20 questions. Include questions without answers and documents belonging to different practice users. This dataset tests the mechanics, not production quality.
 
-[QA-модуль](quality-and-evaluation.md) помогает с выборкой и регрессиями. Serving и нагрузку разбирать в [CUDA/inference](cuda-and-inference.md).
+- Establish a simple baseline, then embedding retrieval and, if needed, reranking.
+- Identify relevant documents for each question; separate tuning examples from the final evaluation.
+- Measure retrieval separately from generation: whether the source is found, whether the answer addresses the question, whether the source supports it, and when the system should abstain.
+- Check that context and answers do not reveal another owner’s documents. Post-filtering after generation does not replace access control.
+- Compare one parameter: chunk size, k, or reranker. Save configurations, raw results, and errors.
+- Validate LLM-as-judge against labeled examples; do not present its score as independent truth.
 
-## Capstone — по желанию, один сценарий
+The [QA module](quality-and-evaluation.md) helps with sampling and regressions. Study serving and load in [CUDA/inference](cuda-and-inference.md).
 
-Выбрать **либо** поиск с цитатами, **либо** review PII findings. Не требуется одновременно строить два продукта.
+<a id="capstone--по-желанию-один-сценарий"></a>
 
-Состав: синтетические входы → backend → выбранный pipeline → review/API → экспорт результата. Добавить один quality report, границу доступа, воспроизводимый запуск и сценарий восстановления. Интерфейс может быть минимальным.
+## Capstone — optional, one scenario
 
-Финиш — другой человек или ты из чистого учебного окружения воспроизводит запуск, проверяет один успешный и один ошибочный сценарий. Реальная эксплуатация требует отдельной приёмки.
+Choose **either** search with citations **or** PII findings review. You do not need to build two products at once.
 
-## Выход и награда
+Components: synthetic inputs → backend → chosen pipeline → review/API → result export. Add one quality report, an access boundary, reproducible startup, and a recovery scenario. The interface can be minimal.
 
-Есть baseline, честное сравнение и понятные ограничения. [LLM Systems Exam](../exams/MASTER_EXAMS.md#llm-systems-exam).
+Finish when another person, or you in a clean learning environment, can reproduce startup and verify one successful and one failing scenario. Real operation requires separate acceptance.
 
-Сертификат NVIDIA относится к завершению курса. Собственный retrieval baseline и capstone дают отдельные личные ачивки; замкнутый проект можно отметить до любого следующего курса.
+<a id="выход-и-награда"></a>
+
+## Outcome and award
+
+A baseline, an honest comparison, and clear limitations. [LLM Systems Exam](../exams/MASTER_EXAMS.md#llm-systems-exam).
+
+The NVIDIA certificate recognizes course completion. Your retrieval baseline and capstone earn separate personal achievements; celebrate a finished project before taking any next course.
